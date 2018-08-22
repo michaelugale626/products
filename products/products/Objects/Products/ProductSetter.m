@@ -14,6 +14,7 @@
 
 //Objects
 #import "PricesSetter.h"
+#import "ProductImagesSetter.h"
 
 @implementation ProductSetter
 
@@ -37,6 +38,8 @@ static ProductSetter *shared = nil;
     prod.productDesc            = [rows[@"desc"] safeStringValue];
     prod.productSKU             = [rows[@"sku"] safeStringValue];
     prod.productPrice           = [[PricesSetter shared] setInfo:rows[@"pricing"]];
+    prod.productImage           = [[ProductImagesSetter shared] setInfo:rows[@"img"]];
+    prod.productGallery         = [[ProductImagesSetter shared] setObject:rows[@"images"]];
     
     return prod;
 }

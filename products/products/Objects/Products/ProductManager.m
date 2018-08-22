@@ -20,6 +20,8 @@
     [coder encodeObject:_productSKU                         forKey:@"productSKU"];
     [coder encodeObject:_productDetails                     forKey:@"productDetails"];
     [coder encodeObject:_productPrice                       forKey:@"productPrice"];
+    [coder encodeObject:_productGallery                     forKey:@"productGallery"];
+    [coder encodeObject:_productImage                       forKey:@"productImage"];
 }
 
 - (instancetype)initWithCoder:(NSCoder *)coder
@@ -32,6 +34,8 @@
         _productSKU                     = [coder decodeObjectForKey:@"productSKU"];
         _productDetails                 = [coder decodeObjectForKey:@"productDetails"];
         _productPrice                   = [coder decodeObjectForKey:@"productPrice"];
+        _productGallery                 = [coder decodeObjectForKey:@"productGallery"];
+        _productImage                   = [coder decodeObjectForKey:@"productImage"];
     }
     return self;
 }

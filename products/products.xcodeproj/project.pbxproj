@@ -43,6 +43,10 @@
 		C4E1B5BE212D050B00BD1A48 /* PricesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5BC212D050B00BD1A48 /* PricesManager.m */; };
 		C4E1B5C1212D051800BD1A48 /* PricesSetter.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5C0212D051800BD1A48 /* PricesSetter.m */; };
 		C4E1B5C2212D051800BD1A48 /* PricesSetter.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5C0212D051800BD1A48 /* PricesSetter.m */; };
+		C4E1B5C6212D9D8100BD1A48 /* ProductImagesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5C5212D9D8100BD1A48 /* ProductImagesManager.m */; };
+		C4E1B5C7212D9D8100BD1A48 /* ProductImagesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5C5212D9D8100BD1A48 /* ProductImagesManager.m */; };
+		C4E1B5CA212D9D9100BD1A48 /* ProductImagesSetter.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5C9212D9D9100BD1A48 /* ProductImagesSetter.m */; };
+		C4E1B5CB212D9D9100BD1A48 /* ProductImagesSetter.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5C9212D9D9100BD1A48 /* ProductImagesSetter.m */; };
 		F1DAFDB1A18D7ABA8D1500EA /* Pods_products.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74DC3D169ACA041B300B7446 /* Pods_products.framework */; };
 /* End PBXBuildFile section */
 
@@ -114,6 +118,10 @@
 		C4E1B5BC212D050B00BD1A48 /* PricesManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PricesManager.m; sourceTree = "<group>"; };
 		C4E1B5BF212D051800BD1A48 /* PricesSetter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PricesSetter.h; sourceTree = "<group>"; };
 		C4E1B5C0212D051800BD1A48 /* PricesSetter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PricesSetter.m; sourceTree = "<group>"; };
+		C4E1B5C4212D9D8100BD1A48 /* ProductImagesManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProductImagesManager.h; sourceTree = "<group>"; };
+		C4E1B5C5212D9D8100BD1A48 /* ProductImagesManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProductImagesManager.m; sourceTree = "<group>"; };
+		C4E1B5C8212D9D9100BD1A48 /* ProductImagesSetter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProductImagesSetter.h; sourceTree = "<group>"; };
+		C4E1B5C9212D9D9100BD1A48 /* ProductImagesSetter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProductImagesSetter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,6 +265,7 @@
 		C4E1B57D212CEE9800BD1A48 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				C4E1B5C3212D9D4C00BD1A48 /* ProductImages */,
 				C4E1B5BA212D04F800BD1A48 /* Prices */,
 				C4E1B5B9212D04EA00BD1A48 /* Products */,
 			);
@@ -356,6 +365,17 @@
 				C4E1B5C0212D051800BD1A48 /* PricesSetter.m */,
 			);
 			path = Prices;
+			sourceTree = "<group>";
+		};
+		C4E1B5C3212D9D4C00BD1A48 /* ProductImages */ = {
+			isa = PBXGroup;
+			children = (
+				C4E1B5C4212D9D8100BD1A48 /* ProductImagesManager.h */,
+				C4E1B5C5212D9D8100BD1A48 /* ProductImagesManager.m */,
+				C4E1B5C8212D9D9100BD1A48 /* ProductImagesSetter.h */,
+				C4E1B5C9212D9D9100BD1A48 /* ProductImagesSetter.m */,
+			);
+			path = ProductImages;
 			sourceTree = "<group>";
 		};
 		D7963D1C6D88BE0E3D1D9AF7 /* Frameworks */ = {
@@ -569,6 +589,7 @@
 				C4E1B593212CF93000BD1A48 /* Cache.m in Sources */,
 				C4E1B5B3212D039100BD1A48 /* ProductManager.m in Sources */,
 				C4E1B5A1212CFB4E00BD1A48 /* NSDateFormatter+StaticInstance.m in Sources */,
+				C4E1B5CA212D9D9100BD1A48 /* ProductImagesSetter.m in Sources */,
 				C4E1B59F212CFB4E00BD1A48 /* NSString+Additions.m in Sources */,
 				C4E1B5A7212CFBE400BD1A48 /* UIColor+More.m in Sources */,
 				C4E1B58A212CF64300BD1A48 /* ServerManager.m in Sources */,
@@ -583,6 +604,7 @@
 				C4E1B5A3212CFB4E00BD1A48 /* NSObject+Cast.m in Sources */,
 				C4E1B5C1212D051800BD1A48 /* PricesSetter.m in Sources */,
 				C4E1B58F212CF67C00BD1A48 /* Reachability.m in Sources */,
+				C4E1B5C6212D9D8100BD1A48 /* ProductImagesManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,6 +615,8 @@
 				C4E1B5A4212CFB4E00BD1A48 /* NSObject+Cast.m in Sources */,
 				C4E1B58B212CF64300BD1A48 /* ServerManager.m in Sources */,
 				C4E1B5A8212CFBE400BD1A48 /* UIColor+More.m in Sources */,
+				C4E1B5CB212D9D9100BD1A48 /* ProductImagesSetter.m in Sources */,
+				C4E1B5C7212D9D8100BD1A48 /* ProductImagesManager.m in Sources */,
 				C4E1B590212CF67C00BD1A48 /* Reachability.m in Sources */,
 				C4E1B5B8212D03A200BD1A48 /* ProductSetter.m in Sources */,
 				C4E1B5AC212CFC2600BD1A48 /* UIViewController+Additions.m in Sources */,
