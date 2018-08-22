@@ -1,0 +1,16 @@
+//
+//  Prefix.pch
+//  products
+//
+//  Created by Michael Ugale on 8/22/18.
+//  Copyright © 2018 Michael Ugale. All rights reserved.
+//
+
+#ifndef Prefix_pch
+#define Prefix_pch
+
+#import "Constant.h"
+#import "SpeilsConstant.h"
+#import "ServerManager.h"
+
+#endif /* Prefix_pch */
