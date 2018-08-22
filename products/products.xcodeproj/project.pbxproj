@@ -47,6 +47,14 @@
 		C4E1B5C7212D9D8100BD1A48 /* ProductImagesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5C5212D9D8100BD1A48 /* ProductImagesManager.m */; };
 		C4E1B5CA212D9D9100BD1A48 /* ProductImagesSetter.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5C9212D9D9100BD1A48 /* ProductImagesSetter.m */; };
 		C4E1B5CB212D9D9100BD1A48 /* ProductImagesSetter.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5C9212D9D9100BD1A48 /* ProductImagesSetter.m */; };
+		C4E1B5D1212DAC4400BD1A48 /* BaseCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5D0212DAC4400BD1A48 /* BaseCollectionViewCell.m */; };
+		C4E1B5D2212DAC4400BD1A48 /* BaseCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5D0212DAC4400BD1A48 /* BaseCollectionViewCell.m */; };
+		C4E1B5D6212DACD700BD1A48 /* ListCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5D5212DACD700BD1A48 /* ListCollectionViewCell.m */; };
+		C4E1B5D7212DACD700BD1A48 /* ListCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5D5212DACD700BD1A48 /* ListCollectionViewCell.m */; };
+		C4E1B5DB212DAF9A00BD1A48 /* MeasuresManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5DA212DAF9A00BD1A48 /* MeasuresManager.m */; };
+		C4E1B5DC212DAF9A00BD1A48 /* MeasuresManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5DA212DAF9A00BD1A48 /* MeasuresManager.m */; };
+		C4E1B5DF212DAFA900BD1A48 /* MeasuresSetter.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5DE212DAFA900BD1A48 /* MeasuresSetter.m */; };
+		C4E1B5E0212DAFA900BD1A48 /* MeasuresSetter.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5DE212DAFA900BD1A48 /* MeasuresSetter.m */; };
 		F1DAFDB1A18D7ABA8D1500EA /* Pods_products.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74DC3D169ACA041B300B7446 /* Pods_products.framework */; };
 /* End PBXBuildFile section */
 
@@ -122,6 +130,14 @@
 		C4E1B5C5212D9D8100BD1A48 /* ProductImagesManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProductImagesManager.m; sourceTree = "<group>"; };
 		C4E1B5C8212D9D9100BD1A48 /* ProductImagesSetter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProductImagesSetter.h; sourceTree = "<group>"; };
 		C4E1B5C9212D9D9100BD1A48 /* ProductImagesSetter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProductImagesSetter.m; sourceTree = "<group>"; };
+		C4E1B5CF212DAC4400BD1A48 /* BaseCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseCollectionViewCell.h; sourceTree = "<group>"; };
+		C4E1B5D0212DAC4400BD1A48 /* BaseCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseCollectionViewCell.m; sourceTree = "<group>"; };
+		C4E1B5D4212DACD700BD1A48 /* ListCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListCollectionViewCell.h; sourceTree = "<group>"; };
+		C4E1B5D5212DACD700BD1A48 /* ListCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListCollectionViewCell.m; sourceTree = "<group>"; };
+		C4E1B5D9212DAF9A00BD1A48 /* MeasuresManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeasuresManager.h; sourceTree = "<group>"; };
+		C4E1B5DA212DAF9A00BD1A48 /* MeasuresManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeasuresManager.m; sourceTree = "<group>"; };
+		C4E1B5DD212DAFA900BD1A48 /* MeasuresSetter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeasuresSetter.h; sourceTree = "<group>"; };
+		C4E1B5DE212DAFA900BD1A48 /* MeasuresSetter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeasuresSetter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +266,7 @@
 		C4E1B57B212CEE6900BD1A48 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				C4E1B5CD212DABF200BD1A48 /* CollectionView */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -265,6 +282,7 @@
 		C4E1B57D212CEE9800BD1A48 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				C4E1B5D8212DAF7400BD1A48 /* Measures */,
 				C4E1B5C3212D9D4C00BD1A48 /* ProductImages */,
 				C4E1B5BA212D04F800BD1A48 /* Prices */,
 				C4E1B5B9212D04EA00BD1A48 /* Products */,
@@ -313,6 +331,7 @@
 			isa = PBXGroup;
 			children = (
 				C4E1B551212B023200BD1A48 /* LaunchScreen.storyboard */,
+				C4E1B54C212B023200BD1A48 /* Main.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -321,7 +340,6 @@
 			isa = PBXGroup;
 			children = (
 				C4E1B585212CF17600BD1A48 /* Prefix.pch */,
-				C4E1B54C212B023200BD1A48 /* Main.storyboard */,
 				C4E1B555212B023200BD1A48 /* main.m */,
 			);
 			path = SupportingFiles;
@@ -376,6 +394,44 @@
 				C4E1B5C9212D9D9100BD1A48 /* ProductImagesSetter.m */,
 			);
 			path = ProductImages;
+			sourceTree = "<group>";
+		};
+		C4E1B5CD212DABF200BD1A48 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				C4E1B5D3212DACA200BD1A48 /* Product */,
+				C4E1B5CE212DAC1300BD1A48 /* Base */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		C4E1B5CE212DAC1300BD1A48 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				C4E1B5CF212DAC4400BD1A48 /* BaseCollectionViewCell.h */,
+				C4E1B5D0212DAC4400BD1A48 /* BaseCollectionViewCell.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		C4E1B5D3212DACA200BD1A48 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				C4E1B5D4212DACD700BD1A48 /* ListCollectionViewCell.h */,
+				C4E1B5D5212DACD700BD1A48 /* ListCollectionViewCell.m */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
+		C4E1B5D8212DAF7400BD1A48 /* Measures */ = {
+			isa = PBXGroup;
+			children = (
+				C4E1B5D9212DAF9A00BD1A48 /* MeasuresManager.h */,
+				C4E1B5DA212DAF9A00BD1A48 /* MeasuresManager.m */,
+				C4E1B5DD212DAFA900BD1A48 /* MeasuresSetter.h */,
+				C4E1B5DE212DAFA900BD1A48 /* MeasuresSetter.m */,
+			);
+			path = Measures;
 			sourceTree = "<group>";
 		};
 		D7963D1C6D88BE0E3D1D9AF7 /* Frameworks */ = {
@@ -591,14 +647,18 @@
 				C4E1B5A1212CFB4E00BD1A48 /* NSDateFormatter+StaticInstance.m in Sources */,
 				C4E1B5CA212D9D9100BD1A48 /* ProductImagesSetter.m in Sources */,
 				C4E1B59F212CFB4E00BD1A48 /* NSString+Additions.m in Sources */,
+				C4E1B5D6212DACD700BD1A48 /* ListCollectionViewCell.m in Sources */,
 				C4E1B5A7212CFBE400BD1A48 /* UIColor+More.m in Sources */,
 				C4E1B58A212CF64300BD1A48 /* ServerManager.m in Sources */,
 				C4E1B5B7212D03A200BD1A48 /* ProductSetter.m in Sources */,
 				C4E1B54B212B023200BD1A48 /* ViewController.m in Sources */,
+				C4E1B5DB212DAF9A00BD1A48 /* MeasuresManager.m in Sources */,
 				C4E1B5AF212CFCB700BD1A48 /* UIAlertController+Convenience.m in Sources */,
 				C4E1B5AB212CFC2600BD1A48 /* UIViewController+Additions.m in Sources */,
 				C4E1B556212B023200BD1A48 /* main.m in Sources */,
 				C4E1B5BD212D050B00BD1A48 /* PricesManager.m in Sources */,
+				C4E1B5DF212DAFA900BD1A48 /* MeasuresSetter.m in Sources */,
+				C4E1B5D1212DAC4400BD1A48 /* BaseCollectionViewCell.m in Sources */,
 				C4E1B548212B023200BD1A48 /* AppDelegate.m in Sources */,
 				C4E1B597212CFA6600BD1A48 /* Utilities.m in Sources */,
 				C4E1B5A3212CFB4E00BD1A48 /* NSObject+Cast.m in Sources */,
@@ -613,13 +673,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4E1B5A4212CFB4E00BD1A48 /* NSObject+Cast.m in Sources */,
+				C4E1B5D2212DAC4400BD1A48 /* BaseCollectionViewCell.m in Sources */,
 				C4E1B58B212CF64300BD1A48 /* ServerManager.m in Sources */,
+				C4E1B5E0212DAFA900BD1A48 /* MeasuresSetter.m in Sources */,
 				C4E1B5A8212CFBE400BD1A48 /* UIColor+More.m in Sources */,
+				C4E1B5DC212DAF9A00BD1A48 /* MeasuresManager.m in Sources */,
 				C4E1B5CB212D9D9100BD1A48 /* ProductImagesSetter.m in Sources */,
 				C4E1B5C7212D9D8100BD1A48 /* ProductImagesManager.m in Sources */,
 				C4E1B590212CF67C00BD1A48 /* Reachability.m in Sources */,
 				C4E1B5B8212D03A200BD1A48 /* ProductSetter.m in Sources */,
 				C4E1B5AC212CFC2600BD1A48 /* UIViewController+Additions.m in Sources */,
+				C4E1B5D7212DACD700BD1A48 /* ListCollectionViewCell.m in Sources */,
 				C4E1B5B0212CFCB700BD1A48 /* UIAlertController+Convenience.m in Sources */,
 				C4E1B594212CF93000BD1A48 /* Cache.m in Sources */,
 				C4E1B5B4212D039100BD1A48 /* ProductManager.m in Sources */,

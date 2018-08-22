@@ -11,6 +11,7 @@
 //Objects
 #import "PricesManager.h"
 #import "ProductImagesManager.h"
+#import "MeasuresManager.h"
 
 @interface ProductManager : NSObject
 
@@ -22,5 +23,6 @@
 @property (nonatomic, strong) NSArray *productGallery;
 @property (nonatomic, strong) PricesManager *productPrice;
 @property (nonatomic, strong) ProductImagesManager *productImage;
+@property (nonatomic, strong) MeasuresManager *productMeasures;
 
 @end

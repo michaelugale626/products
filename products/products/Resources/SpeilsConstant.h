@@ -12,5 +12,6 @@
 #define NO_INTERNET_CONNECTION              @"No internet connection.  Please try again."
 #define ISSUE_ACCESS_TOKEN                  @"Authentication failed."
 
+#define CURRENCY_SYSMBOL                    @"$"
 
 #endif /* SpeilsConstant_h */

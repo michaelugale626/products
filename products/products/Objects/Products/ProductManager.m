@@ -22,6 +22,7 @@
     [coder encodeObject:_productPrice                       forKey:@"productPrice"];
     [coder encodeObject:_productGallery                     forKey:@"productGallery"];
     [coder encodeObject:_productImage                       forKey:@"productImage"];
+    [coder encodeObject:_productMeasures                    forKey:@"productMeasures"];
 }
 
 - (instancetype)initWithCoder:(NSCoder *)coder
@@ -36,6 +37,7 @@
         _productPrice                   = [coder decodeObjectForKey:@"productPrice"];
         _productGallery                 = [coder decodeObjectForKey:@"productGallery"];
         _productImage                   = [coder decodeObjectForKey:@"productImage"];
+        _productMeasures                = [coder decodeObjectForKey:@"productMeasures"];
     }
     return self;
 }
