@@ -3,5 +3,15 @@
 use_frameworks!
 
 target 'products' do
-pod 'AFNetworking', '~> 2.6'
+    pod 'Fabric'
+    pod 'Crashlytics'
+    
+    pod 'AFNetworking'
+    pod 'MBProgressHUD'
+    pod 'SDVersion'
+    pod 'Masonry'
+    
+    pod 'UIAlertController+Blocks'
+    pod 'HMSegmentedControl'
+    pod 'SDWebImage', '~>3.8'
 end
