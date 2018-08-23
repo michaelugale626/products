@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ProductDetailsViewController.h"
 
 //Utilities
 #import "Utilities.h"
@@ -66,7 +67,6 @@
 
 - (void)initializeObjects
 {
-    self.listProducts   = [[NSMutableArray alloc] init];
     self.offset         = 0;
     self.loaderCtr      = 0;
     self.isLoading      = false;
@@ -115,21 +115,42 @@
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     SPLOG_DEBUG(@"selected: %li",(long)indexPath.row);
-}
-
--(void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    SPLOG_DEBUG(@"selected: %li",(long)indexPath.row);
+    ProductDetailsViewController *vc   = [self.storyboard instantiateViewControllerWithIdentifier:@"ProductDetailsVC"];
+    vc.productDetails = self.listProducts[indexPath.row];
+    
+    CATransition *transition = [CATransition animation];
+    transition.duration = 0.3;
+    transition.type = kCATransitionFade;
+    
+    [self.navigationController.view.layer addAnimation:transition forKey:kCATransition];
+    [self.navigationController pushViewController:vc animated:NO];
 }
 
 - (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath
 {
     if ( (indexPath.row == [self.listProducts count] - 1 ) && (self.hasInternet) ) {
-//        [self loadMoreItems];
+        [self loadMoreItems];
     }
 }
 
 #pragma mark - API Action
+
+- (void)checkIsLoading
+{
+    self.loaderCtr++;
+    
+    self.isLoading = true;
+    
+    if (!self.refreshControl.refreshing) {
+        if (self.loaderCtr == 1) {
+            [self.refreshControl endRefreshing];
+            [self.hud hideAnimated:YES afterDelay:0.25f];
+            self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        }
+    } else {
+        self.isLoadMore = false;
+    }
+}
 
 - (void)pullToRefresh
 {
@@ -145,6 +166,11 @@
 
 - (void)hasLoadingItem
 {
+    self.isLoading        = false;
+    self.hasInternet      = true;
+    self.isLoadMore       = false;
+    self.loaderCtr--;
+    
     if (self.loaderCtr <= 0) {
         [self.refreshControl endRefreshing];
         [self.hud hideAnimated:YES afterDelay:0.25f];
@@ -153,27 +179,51 @@
 
 - (void)getProducts
 {
-    self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    
-    NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
-    [dictionary setObject:@"all-sales"                                      forKey:@"theme"];
-    [dictionary setObject:PAGE_LIMIT                                        forKey:@"pageSize"];
-    [dictionary setObject:[NSString stringWithFormat:@"%i",self.offset]     forKey:@"page"];
-    
-    [[ServerManager sharedManager] getProductList:dictionary success:^(NSDictionary *responseObject) {
-        SPLOG_DEBUG(@"%@",responseObject);
-    
-        NSDictionary *response = responseObject[@"products"];
+    if (!self.isLoading) {
         
-        self.listProducts = [[NSMutableArray alloc] initWithArray:[[ProductSetter shared] setObject: response]];
-        [self.collectionView reloadData];
+        [self checkIsLoading];
         
+        NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
+        [dictionary setObject:@"all-sales"                                      forKey:@"theme"];
+        [dictionary setObject:PAGE_LIMIT                                        forKey:@"pageSize"];
+        [dictionary setObject:[NSString stringWithFormat:@"%i",self.offset]     forKey:@"page"];
+        
+        [[ServerManager sharedManager] getProductList:dictionary success:^(NSDictionary *responseObject) {
+            SPLOG_DEBUG(@"%@",responseObject);
+            
+            self.offset = self.offset + 1;
+            
+            NSDictionary *response = responseObject[@"products"];
+            
+            if ([response count] != 0) {
+                
+                if ( !self.isLoadMore ) {
+                    self.listProducts = [[NSMutableArray alloc] init];
+                }
+                
+                [self.listProducts addObjectsFromArray:[[ProductSetter shared] setObject: response]];
+                self.totalItemLoaded = (int)[self.listProducts count];
+                [self.collectionView reloadData];
+            } else if (!self.isLoadMore) {
+                self.listProducts = [[NSMutableArray alloc] init];
+                [self.collectionView reloadData];
+            }
+            
+            [self hasLoadingItem];
+            [self.refreshControl endRefreshing];
+            [self.hud hideAnimated:YES afterDelay:0.25f];
+            
+        } failure:^(NSError *error) {
+            SPLOG_DEBUG(@"%@",error);
+            
+            [self hasLoadingItem];
+            [self.collectionView reloadData];
+            [Utilities showSimpleAlert:self setTitle:[error localizedDescription]];
+        }];
+    } else {
+        [self.refreshControl endRefreshing];
         [self.hud hideAnimated:YES afterDelay:0.25f];
-    } failure:^(NSError *error) {
-        SPLOG_DEBUG(@"%@",error);
-        [self.hud hideAnimated:YES afterDelay:0.25f];
-        [Utilities showSimpleAlert:self setTitle:[error localizedDescription]];
-    }];
+    }
 }
 
 @end

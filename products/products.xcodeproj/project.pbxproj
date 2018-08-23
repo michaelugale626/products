@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C4160ED9212F00ED005BCFDE /* PriceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4160ED8212F00ED005BCFDE /* PriceTableViewCell.m */; };
+		C4160EDA212F00ED005BCFDE /* PriceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4160ED8212F00ED005BCFDE /* PriceTableViewCell.m */; };
+		C4160EDE212F0427005BCFDE /* MeasureTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4160EDD212F0427005BCFDE /* MeasureTableViewCell.m */; };
+		C4160EDF212F0427005BCFDE /* MeasureTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4160EDD212F0427005BCFDE /* MeasureTableViewCell.m */; };
+		C4160EE3212F059D005BCFDE /* DescriptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4160EE2212F059D005BCFDE /* DescriptionTableViewCell.m */; };
+		C4160EE4212F059D005BCFDE /* DescriptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4160EE2212F059D005BCFDE /* DescriptionTableViewCell.m */; };
 		C4E1B548212B023200BD1A48 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B547212B023200BD1A48 /* AppDelegate.m */; };
 		C4E1B54B212B023200BD1A48 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B54A212B023200BD1A48 /* ViewController.m */; };
 		C4E1B54E212B023200BD1A48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4E1B54C212B023200BD1A48 /* Main.storyboard */; };
@@ -55,6 +61,44 @@
 		C4E1B5DC212DAF9A00BD1A48 /* MeasuresManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5DA212DAF9A00BD1A48 /* MeasuresManager.m */; };
 		C4E1B5DF212DAFA900BD1A48 /* MeasuresSetter.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5DE212DAFA900BD1A48 /* MeasuresSetter.m */; };
 		C4E1B5E0212DAFA900BD1A48 /* MeasuresSetter.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5DE212DAFA900BD1A48 /* MeasuresSetter.m */; };
+		C4E1B5E3212EE00500BD1A48 /* ProductDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5E2212EE00500BD1A48 /* ProductDetailsViewController.m */; };
+		C4E1B5E4212EE00500BD1A48 /* ProductDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5E2212EE00500BD1A48 /* ProductDetailsViewController.m */; };
+		C4E1B5E8212EE03C00BD1A48 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5E7212EE03C00BD1A48 /* BaseViewController.m */; };
+		C4E1B5E9212EE03C00BD1A48 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5E7212EE03C00BD1A48 /* BaseViewController.m */; };
+		C4E1B5EE212EE19900BD1A48 /* UILabel+Format.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5EA212EE19800BD1A48 /* UILabel+Format.m */; };
+		C4E1B5EF212EE19900BD1A48 /* UILabel+Format.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5EA212EE19800BD1A48 /* UILabel+Format.m */; };
+		C4E1B5F0212EE19900BD1A48 /* UIButton+Format.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5EC212EE19900BD1A48 /* UIButton+Format.m */; };
+		C4E1B5F1212EE19900BD1A48 /* UIButton+Format.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5EC212EE19900BD1A48 /* UIButton+Format.m */; };
+		C4E1B5F7212EEF2E00BD1A48 /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5F6212EEF2E00BD1A48 /* BaseTableViewCell.m */; };
+		C4E1B5F8212EEF2E00BD1A48 /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5F6212EEF2E00BD1A48 /* BaseTableViewCell.m */; };
+		C4E1B5FC212EEF7700BD1A48 /* GalleryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5FB212EEF7700BD1A48 /* GalleryTableViewCell.m */; };
+		C4E1B5FD212EEF7700BD1A48 /* GalleryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5FB212EEF7700BD1A48 /* GalleryTableViewCell.m */; };
+		C4E1B602212EF09B00BD1A48 /* TitleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B601212EF09B00BD1A48 /* TitleTableViewCell.m */; };
+		C4E1B603212EF09B00BD1A48 /* TitleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B601212EF09B00BD1A48 /* TitleTableViewCell.m */; };
+		C4E1B611212EF56800BD1A48 /* Seravek-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4E1B605212EF56700BD1A48 /* Seravek-ExtraLight.otf */; };
+		C4E1B612212EF56800BD1A48 /* Seravek-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4E1B605212EF56700BD1A48 /* Seravek-ExtraLight.otf */; };
+		C4E1B613212EF56800BD1A48 /* Seravek-ExtraLightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4E1B606212EF56700BD1A48 /* Seravek-ExtraLightItalic.otf */; };
+		C4E1B614212EF56800BD1A48 /* Seravek-ExtraLightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4E1B606212EF56700BD1A48 /* Seravek-ExtraLightItalic.otf */; };
+		C4E1B615212EF56800BD1A48 /* Seravek-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4E1B607212EF56700BD1A48 /* Seravek-Medium.otf */; };
+		C4E1B616212EF56800BD1A48 /* Seravek-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4E1B607212EF56700BD1A48 /* Seravek-Medium.otf */; };
+		C4E1B617212EF56800BD1A48 /* Seravek-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4E1B608212EF56700BD1A48 /* Seravek-BoldItalic.otf */; };
+		C4E1B618212EF56800BD1A48 /* Seravek-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4E1B608212EF56700BD1A48 /* Seravek-BoldItalic.otf */; };
+		C4E1B619212EF56800BD1A48 /* Seravek-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4E1B609212EF56700BD1A48 /* Seravek-Italic.otf */; };
+		C4E1B61A212EF56800BD1A48 /* Seravek-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4E1B609212EF56700BD1A48 /* Seravek-Italic.otf */; };
+		C4E1B61B212EF56800BD1A48 /* GE_Dinar_Two_Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4E1B60A212EF56800BD1A48 /* GE_Dinar_Two_Light.otf */; };
+		C4E1B61C212EF56800BD1A48 /* GE_Dinar_Two_Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4E1B60A212EF56800BD1A48 /* GE_Dinar_Two_Light.otf */; };
+		C4E1B61D212EF56800BD1A48 /* Seravek-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4E1B60B212EF56800BD1A48 /* Seravek-Bold.otf */; };
+		C4E1B61E212EF56800BD1A48 /* Seravek-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4E1B60B212EF56800BD1A48 /* Seravek-Bold.otf */; };
+		C4E1B61F212EF56800BD1A48 /* Seravek-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4E1B60C212EF56800BD1A48 /* Seravek-Light.otf */; };
+		C4E1B620212EF56800BD1A48 /* Seravek-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4E1B60C212EF56800BD1A48 /* Seravek-Light.otf */; };
+		C4E1B621212EF56800BD1A48 /* Seravek-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4E1B60D212EF56800BD1A48 /* Seravek-MediumItalic.otf */; };
+		C4E1B622212EF56800BD1A48 /* Seravek-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4E1B60D212EF56800BD1A48 /* Seravek-MediumItalic.otf */; };
+		C4E1B623212EF56800BD1A48 /* GE_Dinar_Two_Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4E1B60E212EF56800BD1A48 /* GE_Dinar_Two_Medium.otf */; };
+		C4E1B624212EF56800BD1A48 /* GE_Dinar_Two_Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4E1B60E212EF56800BD1A48 /* GE_Dinar_Two_Medium.otf */; };
+		C4E1B625212EF56800BD1A48 /* Seravek-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4E1B60F212EF56800BD1A48 /* Seravek-LightItalic.otf */; };
+		C4E1B626212EF56800BD1A48 /* Seravek-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4E1B60F212EF56800BD1A48 /* Seravek-LightItalic.otf */; };
+		C4E1B627212EF56800BD1A48 /* Seravek.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4E1B610212EF56800BD1A48 /* Seravek.otf */; };
+		C4E1B628212EF56800BD1A48 /* Seravek.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4E1B610212EF56800BD1A48 /* Seravek.otf */; };
 		F1DAFDB1A18D7ABA8D1500EA /* Pods_products.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74DC3D169ACA041B300B7446 /* Pods_products.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +123,12 @@
 		176D8D98B5D36D5B321C6450 /* Pods-products.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-products.debug.xcconfig"; path = "Pods/Target Support Files/Pods-products/Pods-products.debug.xcconfig"; sourceTree = "<group>"; };
 		74DC3D169ACA041B300B7446 /* Pods_products.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_products.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8173FED5FC8D02518327EE54 /* Pods-products.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-products.release.xcconfig"; path = "Pods/Target Support Files/Pods-products/Pods-products.release.xcconfig"; sourceTree = "<group>"; };
+		C4160ED7212F00ED005BCFDE /* PriceTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PriceTableViewCell.h; sourceTree = "<group>"; };
+		C4160ED8212F00ED005BCFDE /* PriceTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PriceTableViewCell.m; sourceTree = "<group>"; };
+		C4160EDC212F0427005BCFDE /* MeasureTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeasureTableViewCell.h; sourceTree = "<group>"; };
+		C4160EDD212F0427005BCFDE /* MeasureTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeasureTableViewCell.m; sourceTree = "<group>"; };
+		C4160EE1212F059D005BCFDE /* DescriptionTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DescriptionTableViewCell.h; sourceTree = "<group>"; };
+		C4160EE2212F059D005BCFDE /* DescriptionTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DescriptionTableViewCell.m; sourceTree = "<group>"; };
 		C4E1B543212B023200BD1A48 /* products.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = products.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4E1B546212B023200BD1A48 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C4E1B547212B023200BD1A48 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -138,6 +188,32 @@
 		C4E1B5DA212DAF9A00BD1A48 /* MeasuresManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeasuresManager.m; sourceTree = "<group>"; };
 		C4E1B5DD212DAFA900BD1A48 /* MeasuresSetter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeasuresSetter.h; sourceTree = "<group>"; };
 		C4E1B5DE212DAFA900BD1A48 /* MeasuresSetter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeasuresSetter.m; sourceTree = "<group>"; };
+		C4E1B5E1212EE00500BD1A48 /* ProductDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProductDetailsViewController.h; sourceTree = "<group>"; };
+		C4E1B5E2212EE00500BD1A48 /* ProductDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProductDetailsViewController.m; sourceTree = "<group>"; };
+		C4E1B5E6212EE03C00BD1A48 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		C4E1B5E7212EE03C00BD1A48 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		C4E1B5EA212EE19800BD1A48 /* UILabel+Format.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Format.m"; sourceTree = "<group>"; };
+		C4E1B5EB212EE19800BD1A48 /* UIButton+Format.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Format.h"; sourceTree = "<group>"; };
+		C4E1B5EC212EE19900BD1A48 /* UIButton+Format.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Format.m"; sourceTree = "<group>"; };
+		C4E1B5ED212EE19900BD1A48 /* UILabel+Format.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Format.h"; sourceTree = "<group>"; };
+		C4E1B5F5212EEF2E00BD1A48 /* BaseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
+		C4E1B5F6212EEF2E00BD1A48 /* BaseTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
+		C4E1B5FA212EEF7700BD1A48 /* GalleryTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GalleryTableViewCell.h; sourceTree = "<group>"; };
+		C4E1B5FB212EEF7700BD1A48 /* GalleryTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GalleryTableViewCell.m; sourceTree = "<group>"; };
+		C4E1B600212EF09B00BD1A48 /* TitleTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TitleTableViewCell.h; sourceTree = "<group>"; };
+		C4E1B601212EF09B00BD1A48 /* TitleTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TitleTableViewCell.m; sourceTree = "<group>"; };
+		C4E1B605212EF56700BD1A48 /* Seravek-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Seravek-ExtraLight.otf"; sourceTree = "<group>"; };
+		C4E1B606212EF56700BD1A48 /* Seravek-ExtraLightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Seravek-ExtraLightItalic.otf"; sourceTree = "<group>"; };
+		C4E1B607212EF56700BD1A48 /* Seravek-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Seravek-Medium.otf"; sourceTree = "<group>"; };
+		C4E1B608212EF56700BD1A48 /* Seravek-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Seravek-BoldItalic.otf"; sourceTree = "<group>"; };
+		C4E1B609212EF56700BD1A48 /* Seravek-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Seravek-Italic.otf"; sourceTree = "<group>"; };
+		C4E1B60A212EF56800BD1A48 /* GE_Dinar_Two_Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GE_Dinar_Two_Light.otf; sourceTree = "<group>"; };
+		C4E1B60B212EF56800BD1A48 /* Seravek-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Seravek-Bold.otf"; sourceTree = "<group>"; };
+		C4E1B60C212EF56800BD1A48 /* Seravek-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Seravek-Light.otf"; sourceTree = "<group>"; };
+		C4E1B60D212EF56800BD1A48 /* Seravek-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Seravek-MediumItalic.otf"; sourceTree = "<group>"; };
+		C4E1B60E212EF56800BD1A48 /* GE_Dinar_Two_Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GE_Dinar_Two_Medium.otf; sourceTree = "<group>"; };
+		C4E1B60F212EF56800BD1A48 /* Seravek-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Seravek-LightItalic.otf"; sourceTree = "<group>"; };
+		C4E1B610212EF56800BD1A48 /* Seravek.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Seravek.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +249,33 @@
 				8173FED5FC8D02518327EE54 /* Pods-products.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		C4160ED6212F00DB005BCFDE /* Price */ = {
+			isa = PBXGroup;
+			children = (
+				C4160ED7212F00ED005BCFDE /* PriceTableViewCell.h */,
+				C4160ED8212F00ED005BCFDE /* PriceTableViewCell.m */,
+			);
+			path = Price;
+			sourceTree = "<group>";
+		};
+		C4160EDB212F0413005BCFDE /* Measure */ = {
+			isa = PBXGroup;
+			children = (
+				C4160EDC212F0427005BCFDE /* MeasureTableViewCell.h */,
+				C4160EDD212F0427005BCFDE /* MeasureTableViewCell.m */,
+			);
+			path = Measure;
+			sourceTree = "<group>";
+		};
+		C4160EE0212F0589005BCFDE /* Description */ = {
+			isa = PBXGroup;
+			children = (
+				C4160EE1212F059D005BCFDE /* DescriptionTableViewCell.h */,
+				C4160EE2212F059D005BCFDE /* DescriptionTableViewCell.m */,
+			);
+			path = Description;
 			sourceTree = "<group>";
 		};
 		C4E1B53A212B023200BD1A48 = {
@@ -237,6 +340,7 @@
 		C4E1B579212CEE4F00BD1A48 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C4E1B604212EF55900BD1A48 /* Font */,
 				C4E1B54F212B023200BD1A48 /* Assets.xcassets */,
 				C4E1B583212CF03F00BD1A48 /* Constant.h */,
 				C4E1B586212CF1EC00BD1A48 /* SpeilsConstant.h */,
@@ -247,6 +351,10 @@
 		C4E1B57A212CEE5F00BD1A48 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				C4E1B5EB212EE19800BD1A48 /* UIButton+Format.h */,
+				C4E1B5EC212EE19900BD1A48 /* UIButton+Format.m */,
+				C4E1B5ED212EE19900BD1A48 /* UILabel+Format.h */,
+				C4E1B5EA212EE19800BD1A48 /* UILabel+Format.m */,
 				C4E1B5AE212CFCB700BD1A48 /* UIAlertController+Convenience.h */,
 				C4E1B5AD212CFCB700BD1A48 /* UIAlertController+Convenience.m */,
 				C4E1B5AA212CFC2600BD1A48 /* UIViewController+Additions.h */,
@@ -266,6 +374,7 @@
 		C4E1B57B212CEE6900BD1A48 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				C4E1B5F3212EEEC800BD1A48 /* TableViewCell */,
 				C4E1B5CD212DABF200BD1A48 /* CollectionView */,
 			);
 			path = CustomViews;
@@ -312,6 +421,8 @@
 		C4E1B580212CEECD00BD1A48 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				C4E1B5F2212EEA5D00BD1A48 /* Details */,
+				C4E1B5E5212EE02F00BD1A48 /* Base */,
 				C4E1B549212B023200BD1A48 /* ViewController.h */,
 				C4E1B54A212B023200BD1A48 /* ViewController.m */,
 			);
@@ -434,6 +545,91 @@
 			path = Measures;
 			sourceTree = "<group>";
 		};
+		C4E1B5E5212EE02F00BD1A48 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				C4E1B5E6212EE03C00BD1A48 /* BaseViewController.h */,
+				C4E1B5E7212EE03C00BD1A48 /* BaseViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		C4E1B5F2212EEA5D00BD1A48 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				C4E1B5E1212EE00500BD1A48 /* ProductDetailsViewController.h */,
+				C4E1B5E2212EE00500BD1A48 /* ProductDetailsViewController.m */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		C4E1B5F3212EEEC800BD1A48 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C4E1B5F9212EEF5900BD1A48 /* ProductDetails */,
+				C4E1B5F4212EEF2300BD1A48 /* Base */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		C4E1B5F4212EEF2300BD1A48 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				C4E1B5F5212EEF2E00BD1A48 /* BaseTableViewCell.h */,
+				C4E1B5F6212EEF2E00BD1A48 /* BaseTableViewCell.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		C4E1B5F9212EEF5900BD1A48 /* ProductDetails */ = {
+			isa = PBXGroup;
+			children = (
+				C4160EE0212F0589005BCFDE /* Description */,
+				C4160EDB212F0413005BCFDE /* Measure */,
+				C4160ED6212F00DB005BCFDE /* Price */,
+				C4E1B5FF212EF07300BD1A48 /* Title */,
+				C4E1B5FE212EF06900BD1A48 /* Gallery */,
+			);
+			path = ProductDetails;
+			sourceTree = "<group>";
+		};
+		C4E1B5FE212EF06900BD1A48 /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				C4E1B5FA212EEF7700BD1A48 /* GalleryTableViewCell.h */,
+				C4E1B5FB212EEF7700BD1A48 /* GalleryTableViewCell.m */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
+		C4E1B5FF212EF07300BD1A48 /* Title */ = {
+			isa = PBXGroup;
+			children = (
+				C4E1B600212EF09B00BD1A48 /* TitleTableViewCell.h */,
+				C4E1B601212EF09B00BD1A48 /* TitleTableViewCell.m */,
+			);
+			path = Title;
+			sourceTree = "<group>";
+		};
+		C4E1B604212EF55900BD1A48 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				C4E1B60A212EF56800BD1A48 /* GE_Dinar_Two_Light.otf */,
+				C4E1B60E212EF56800BD1A48 /* GE_Dinar_Two_Medium.otf */,
+				C4E1B60B212EF56800BD1A48 /* Seravek-Bold.otf */,
+				C4E1B608212EF56700BD1A48 /* Seravek-BoldItalic.otf */,
+				C4E1B605212EF56700BD1A48 /* Seravek-ExtraLight.otf */,
+				C4E1B606212EF56700BD1A48 /* Seravek-ExtraLightItalic.otf */,
+				C4E1B609212EF56700BD1A48 /* Seravek-Italic.otf */,
+				C4E1B60C212EF56800BD1A48 /* Seravek-Light.otf */,
+				C4E1B60F212EF56800BD1A48 /* Seravek-LightItalic.otf */,
+				C4E1B607212EF56700BD1A48 /* Seravek-Medium.otf */,
+				C4E1B60D212EF56800BD1A48 /* Seravek-MediumItalic.otf */,
+				C4E1B610212EF56800BD1A48 /* Seravek.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		D7963D1C6D88BE0E3D1D9AF7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -551,9 +747,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4E1B623212EF56800BD1A48 /* GE_Dinar_Two_Medium.otf in Resources */,
+				C4E1B615212EF56800BD1A48 /* Seravek-Medium.otf in Resources */,
 				C4E1B553212B023200BD1A48 /* LaunchScreen.storyboard in Resources */,
+				C4E1B61B212EF56800BD1A48 /* GE_Dinar_Two_Light.otf in Resources */,
+				C4E1B625212EF56800BD1A48 /* Seravek-LightItalic.otf in Resources */,
 				C4E1B550212B023200BD1A48 /* Assets.xcassets in Resources */,
+				C4E1B627212EF56800BD1A48 /* Seravek.otf in Resources */,
+				C4E1B621212EF56800BD1A48 /* Seravek-MediumItalic.otf in Resources */,
 				C4E1B54E212B023200BD1A48 /* Main.storyboard in Resources */,
+				C4E1B613212EF56800BD1A48 /* Seravek-ExtraLightItalic.otf in Resources */,
+				C4E1B619212EF56800BD1A48 /* Seravek-Italic.otf in Resources */,
+				C4E1B611212EF56800BD1A48 /* Seravek-ExtraLight.otf in Resources */,
+				C4E1B61D212EF56800BD1A48 /* Seravek-Bold.otf in Resources */,
+				C4E1B617212EF56800BD1A48 /* Seravek-BoldItalic.otf in Resources */,
+				C4E1B61F212EF56800BD1A48 /* Seravek-Light.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,6 +769,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4E1B626212EF56800BD1A48 /* Seravek-LightItalic.otf in Resources */,
+				C4E1B616212EF56800BD1A48 /* Seravek-Medium.otf in Resources */,
+				C4E1B61E212EF56800BD1A48 /* Seravek-Bold.otf in Resources */,
+				C4E1B628212EF56800BD1A48 /* Seravek.otf in Resources */,
+				C4E1B61A212EF56800BD1A48 /* Seravek-Italic.otf in Resources */,
+				C4E1B61C212EF56800BD1A48 /* GE_Dinar_Two_Light.otf in Resources */,
+				C4E1B612212EF56800BD1A48 /* Seravek-ExtraLight.otf in Resources */,
+				C4E1B618212EF56800BD1A48 /* Seravek-BoldItalic.otf in Resources */,
+				C4E1B620212EF56800BD1A48 /* Seravek-Light.otf in Resources */,
+				C4E1B622212EF56800BD1A48 /* Seravek-MediumItalic.otf in Resources */,
+				C4E1B624212EF56800BD1A48 /* GE_Dinar_Two_Medium.otf in Resources */,
+				C4E1B614212EF56800BD1A48 /* Seravek-ExtraLightItalic.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -642,9 +862,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4E1B602212EF09B00BD1A48 /* TitleTableViewCell.m in Sources */,
 				C4E1B593212CF93000BD1A48 /* Cache.m in Sources */,
 				C4E1B5B3212D039100BD1A48 /* ProductManager.m in Sources */,
+				C4E1B5F0212EE19900BD1A48 /* UIButton+Format.m in Sources */,
+				C4160ED9212F00ED005BCFDE /* PriceTableViewCell.m in Sources */,
 				C4E1B5A1212CFB4E00BD1A48 /* NSDateFormatter+StaticInstance.m in Sources */,
+				C4160EDE212F0427005BCFDE /* MeasureTableViewCell.m in Sources */,
+				C4E1B5EE212EE19900BD1A48 /* UILabel+Format.m in Sources */,
 				C4E1B5CA212D9D9100BD1A48 /* ProductImagesSetter.m in Sources */,
 				C4E1B59F212CFB4E00BD1A48 /* NSString+Additions.m in Sources */,
 				C4E1B5D6212DACD700BD1A48 /* ListCollectionViewCell.m in Sources */,
@@ -652,18 +877,23 @@
 				C4E1B58A212CF64300BD1A48 /* ServerManager.m in Sources */,
 				C4E1B5B7212D03A200BD1A48 /* ProductSetter.m in Sources */,
 				C4E1B54B212B023200BD1A48 /* ViewController.m in Sources */,
+				C4E1B5F7212EEF2E00BD1A48 /* BaseTableViewCell.m in Sources */,
 				C4E1B5DB212DAF9A00BD1A48 /* MeasuresManager.m in Sources */,
+				C4E1B5E8212EE03C00BD1A48 /* BaseViewController.m in Sources */,
 				C4E1B5AF212CFCB700BD1A48 /* UIAlertController+Convenience.m in Sources */,
 				C4E1B5AB212CFC2600BD1A48 /* UIViewController+Additions.m in Sources */,
 				C4E1B556212B023200BD1A48 /* main.m in Sources */,
 				C4E1B5BD212D050B00BD1A48 /* PricesManager.m in Sources */,
+				C4E1B5E3212EE00500BD1A48 /* ProductDetailsViewController.m in Sources */,
 				C4E1B5DF212DAFA900BD1A48 /* MeasuresSetter.m in Sources */,
 				C4E1B5D1212DAC4400BD1A48 /* BaseCollectionViewCell.m in Sources */,
 				C4E1B548212B023200BD1A48 /* AppDelegate.m in Sources */,
+				C4160EE3212F059D005BCFDE /* DescriptionTableViewCell.m in Sources */,
 				C4E1B597212CFA6600BD1A48 /* Utilities.m in Sources */,
 				C4E1B5A3212CFB4E00BD1A48 /* NSObject+Cast.m in Sources */,
 				C4E1B5C1212D051800BD1A48 /* PricesSetter.m in Sources */,
 				C4E1B58F212CF67C00BD1A48 /* Reachability.m in Sources */,
+				C4E1B5FC212EEF7700BD1A48 /* GalleryTableViewCell.m in Sources */,
 				C4E1B5C6212D9D8100BD1A48 /* ProductImagesManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -673,15 +903,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4E1B5A4212CFB4E00BD1A48 /* NSObject+Cast.m in Sources */,
+				C4160EDA212F00ED005BCFDE /* PriceTableViewCell.m in Sources */,
+				C4E1B5F1212EE19900BD1A48 /* UIButton+Format.m in Sources */,
 				C4E1B5D2212DAC4400BD1A48 /* BaseCollectionViewCell.m in Sources */,
 				C4E1B58B212CF64300BD1A48 /* ServerManager.m in Sources */,
 				C4E1B5E0212DAFA900BD1A48 /* MeasuresSetter.m in Sources */,
 				C4E1B5A8212CFBE400BD1A48 /* UIColor+More.m in Sources */,
 				C4E1B5DC212DAF9A00BD1A48 /* MeasuresManager.m in Sources */,
 				C4E1B5CB212D9D9100BD1A48 /* ProductImagesSetter.m in Sources */,
+				C4E1B5F8212EEF2E00BD1A48 /* BaseTableViewCell.m in Sources */,
 				C4E1B5C7212D9D8100BD1A48 /* ProductImagesManager.m in Sources */,
 				C4E1B590212CF67C00BD1A48 /* Reachability.m in Sources */,
+				C4160EE4212F059D005BCFDE /* DescriptionTableViewCell.m in Sources */,
 				C4E1B5B8212D03A200BD1A48 /* ProductSetter.m in Sources */,
+				C4E1B603212EF09B00BD1A48 /* TitleTableViewCell.m in Sources */,
 				C4E1B5AC212CFC2600BD1A48 /* UIViewController+Additions.m in Sources */,
 				C4E1B5D7212DACD700BD1A48 /* ListCollectionViewCell.m in Sources */,
 				C4E1B5B0212CFCB700BD1A48 /* UIAlertController+Convenience.m in Sources */,
@@ -691,8 +926,13 @@
 				C4E1B598212CFA6600BD1A48 /* Utilities.m in Sources */,
 				C4E1B5A0212CFB4E00BD1A48 /* NSString+Additions.m in Sources */,
 				C4E1B5A2212CFB4E00BD1A48 /* NSDateFormatter+StaticInstance.m in Sources */,
+				C4E1B5E4212EE00500BD1A48 /* ProductDetailsViewController.m in Sources */,
+				C4160EDF212F0427005BCFDE /* MeasureTableViewCell.m in Sources */,
 				C4E1B5C2212D051800BD1A48 /* PricesSetter.m in Sources */,
+				C4E1B5EF212EE19900BD1A48 /* UILabel+Format.m in Sources */,
 				C4E1B5BE212D050B00BD1A48 /* PricesManager.m in Sources */,
+				C4E1B5E9212EE03C00BD1A48 /* BaseViewController.m in Sources */,
+				C4E1B5FD212EEF7700BD1A48 /* GalleryTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

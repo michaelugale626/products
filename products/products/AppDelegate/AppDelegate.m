@@ -16,7 +16,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [Fabric with:@[[Crashlytics class]]];
+    [self setUpFabric];
     return YES;
 }
 
@@ -47,5 +47,11 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+#pragma mark - Private Methods
+
+- (void)setUpFabric
+{
+    [Fabric with:@[[Crashlytics class]]];
+}
 
 @end

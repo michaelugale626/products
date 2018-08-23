@@ -8,14 +8,6 @@
 
 #import "ListCollectionViewCell.h"
 
-//Vendor
-#import <SDWebImage/UIImageView+WebCache.h>
-
-//Object
-#import "PricesManager.h"
-#import "ProductImagesManager.h"
-#import "MeasuresManager.h"
-
 @implementation ListCollectionViewCell
 
 - (void)awakeFromNib
@@ -27,6 +19,15 @@
     
     self.imageContainer.layer.cornerRadius   = 5;
     self.imageContainer.layer.masksToBounds  = YES;
+    
+    [self.title setFont:FONT_UI_Text_Light(16)];
+    [self.title setTextColor:[UIColor colorWithHex:THEME_COLOR_BLACK]];
+    
+    [self.price setFont:FONT_UI_Text_Regular(16)];
+    [self.price setTextColor:[UIColor colorWithHex:THEME_COLOR_BLACK]];
+    
+    [self.measure setFont:FONT_UI_Text_Light(12)];
+    [self.measure setTextColor:[UIColor colorWithHex:THEME_COLOR_GRAY]];
 }
 
 - (void)setvalue:(ProductManager *)product

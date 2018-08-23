@@ -77,9 +77,9 @@
 // App Font List
 //******************************
 
-#define FONT_UI_Text_Regular(s)             [UIFont fontWithName:@"Montserrat-Regular" size:s]
-#define FONT_UI_Text_Bold(s)                [UIFont fontWithName:@"Montserrat-Bold" size:s]
-#define FONT_UI_Text_Light(s)               [UIFont fontWithName:@"Montserrat-Light" size:s]
+#define FONT_UI_Text_Regular(s)          [UIFont fontWithName:@"Seravek-Medium" size:s]
+#define FONT_UI_Text_Bold(s)             [UIFont fontWithName:@"Seravek-Bold" size:s]
+#define FONT_UI_Text_Light(s)            [UIFont fontWithName:@"Seravek-Light" size:s]
 
 //******************************
 // App Theme Colors

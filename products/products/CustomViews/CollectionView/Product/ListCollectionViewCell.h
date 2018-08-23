@@ -8,9 +8,6 @@
 
 #import "BaseCollectionViewCell.h"
 
-//Objects
-#import "ProductManager.h"
-
 @interface ListCollectionViewCell : BaseCollectionViewCell
 
 @property (weak, nonatomic) IBOutlet UIView *mainContainer;
