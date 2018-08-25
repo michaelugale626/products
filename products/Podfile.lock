@@ -23,9 +23,17 @@ PODS:
   - Crashlytics (3.10.7):
     - Fabric (~> 1.7.11)
   - Fabric (1.7.11)
+  - FLAnimatedImage (1.0.12)
   - HMSegmentedControl (1.5.5)
   - Masonry (1.1.0)
   - MBProgressHUD (1.1.0)
+  - NYTPhotoViewer (1.1.0):
+    - NYTPhotoViewer/AnimatedGifSupport (= 1.1.0)
+    - NYTPhotoViewer/Core (= 1.1.0)
+  - NYTPhotoViewer/AnimatedGifSupport (1.1.0):
+    - FLAnimatedImage (~> 1.0.8)
+    - NYTPhotoViewer/Core
+  - NYTPhotoViewer/Core (1.1.0)
   - SDVersion (4.3.2)
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
@@ -39,6 +47,7 @@ DEPENDENCIES:
   - HMSegmentedControl
   - Masonry
   - MBProgressHUD
+  - NYTPhotoViewer (~> 1.1.0)
   - SDVersion
   - SDWebImage (~> 3.8)
   - "UIAlertController+Blocks"
@@ -48,9 +57,11 @@ SPEC REPOS:
     - AFNetworking
     - Crashlytics
     - Fabric
+    - FLAnimatedImage
     - HMSegmentedControl
     - Masonry
     - MBProgressHUD
+    - NYTPhotoViewer
     - SDVersion
     - SDWebImage
     - "UIAlertController+Blocks"
@@ -59,13 +70,15 @@ SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
   Crashlytics: ccaac42660eb9351b9960c0d66106b0bcf99f4fa
   Fabric: f233c9492b3bbc1f04e3882986740f7988a58edb
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   HMSegmentedControl: f514c6dad47aa3065e0ed2e8046b73efc71221b9
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  NYTPhotoViewer: e80e8767f3780d2df37c6f72cbab15d6c7232911
   SDVersion: 18f32c835c1543611fcfae3c6accd9a04b90597e
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   "UIAlertController+Blocks": 80e28b92523fb58aba4d1bccec013d5a0b0bddb2
 
-PODFILE CHECKSUM: 2340b4ab77cb22e5be21359f48c2e6af7536f652
+PODFILE CHECKSUM: 6d9359b66af1a0258ef0b5221ef32e47b847c8a6
 
 COCOAPODS: 1.5.3

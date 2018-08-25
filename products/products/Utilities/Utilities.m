@@ -32,4 +32,10 @@
     [view presentViewController:alert animated:YES completion:nil];
 }
 
+#pragma mark - NSString
+
++(NSString*) formatPrice: (NSNumber*)value
+{
+    return [NSString stringWithFormat:@"%.02f", [value floatValue]];
+}
 @end

@@ -14,4 +14,5 @@ target 'products' do
     pod 'UIAlertController+Blocks'
     pod 'HMSegmentedControl'
     pod 'SDWebImage', '~>3.8'
+    pod 'NYTPhotoViewer', '~> 1.1.0'
 end

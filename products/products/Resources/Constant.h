@@ -69,9 +69,8 @@
 #define API_BASE_URL                @"https://api.redmart.com/v1.6.0/"
 #define API_MEDIA_BASE_URL          @"http://media.redmart.com/newmedia/200p"
 
-#define API_ENDPOINT_PRODUCT_DETAILS                   @"products/%@" //PRODUCT ID
-#define API_ENDPOINT_PRODUCT_SEARCH                    @"catalog/search?theme=%@&pageSize=%@&page=%@" //THEME LIMIT OFFSET
-#define API_ENDPOINT_PRODUCT_SEARCH_                   @"catalog/search"
+#define API_ENDPOINT_PRODUCT_DETAILS                  @"products/%@" //PRODUCT ID
+#define API_ENDPOINT_PRODUCT_SEARCH                   @"catalog/search"
 
 //******************************
 // App Font List

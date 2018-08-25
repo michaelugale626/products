@@ -14,4 +14,7 @@
 #pragma mark - Alert
 +(void) showSimpleAlert:(UIViewController *)view setTitle:(NSString *)title;
 
+#pragma mark - NSString
++(NSString*) formatPrice: (NSNumber*)value;
+
 @end

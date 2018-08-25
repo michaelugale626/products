@@ -15,6 +15,12 @@
 #import "MeasureTableViewCell.h"
 #import "DescriptionTableViewCell.h"
 
+//Utilities
+#import "Utilities.h"
+
+//Objects
+#import "ProductSetter.h"
+
 @interface ProductDetailsViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView        *tableView;
@@ -32,6 +38,7 @@
     [super viewDidLoad];
     
     [self initializeObjects];
+    [self getProductDetails];
     [self configureView];
 }
 
@@ -70,7 +77,7 @@
 - (void) configureNavigationBar
 {
     [self.navigationController setNavigationBarHidden:NO animated:YES];
-    [self setNavigationTitle:self.productDetails.productSKU];
+    [self setNavigationTitle:[NSString stringWithFormat:@"SKU %@",self.productDetails.productSKU]];
 }
 
 - (void) configureTableView
@@ -180,5 +187,28 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+}
+
+- (void)getProductDetails
+{
+    self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    
+    [[ServerManager sharedManager] getProductDetails:self.productDetails.productID
+                                             success:^(NSDictionary *responseObject) {
+                                                 SPLOG_DEBUG(@"PRODUCT DETAILS: %@",responseObject);
+                                                 NSDictionary *response = responseObject[@"product"];
+                                                 
+                                                 if ([response count] != 0) {
+                                                     self.productDetails = [[ProductSetter shared] setInfo:response];
+                                                 }
+                                                 
+                                                 [self.tableView reloadData];
+                                                 [self.hud hideAnimated:YES afterDelay:0.25f];
+                                             } failure:^(NSError *error) {
+                                                 SPLOG_DEBUG(@"PRODUCT DETAILS: %@",error);
+                                                 [self.tableView reloadData];
+                                                 [self.hud hideAnimated:YES afterDelay:0.25f];
+                                                 [Utilities showSimpleAlert:self setTitle:[error localizedDescription]];
+                                             }];
 }
 @end

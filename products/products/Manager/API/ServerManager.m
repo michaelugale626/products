@@ -173,7 +173,7 @@ static ServerManager *manager = nil;
     
     info[NSLocalizedDescriptionKey] = ISSUE_ACCESS_TOKEN;
     
-    NSError *error = [NSError errorWithDomain:@"Connection Error" code:9997 userInfo:info];
+    NSError *error = [NSError errorWithDomain:CONNECTION_ERROR code:9997 userInfo:info];
     
     [Utilities showSimpleAlert:(id)self setTitle:[error localizedDescription]];
     
@@ -203,7 +203,7 @@ static ServerManager *manager = nil;
         } else if (error.localizedDescription) {
             errorMessage = error.localizedDescription;
         } else {
-            errorMessage = @"Something went wrong. Please try again later.";
+            errorMessage = SOMETHING_WENT_WRONG;
         }
         
         NSString *errorCode = [error.userInfo[JSONResponseSerializerWithDataKey][@"code"] safeStringValue];
@@ -229,7 +229,6 @@ static ServerManager *manager = nil;
                                                                                 30)];
                 self.floatingWarning.backgroundColor    = [UIColor clearColor];
                 self.floatingWarning.alpha              = 0.7f;
-                
                 
                 UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, [UIViewController topViewController].view.bounds.size.width, 30)];
                 label.text = errorMessage;
@@ -276,11 +275,31 @@ static ServerManager *manager = nil;
         return;
     }
     
-    NSString *endpoint  = [NSString stringWithFormat:API_ENDPOINT_PRODUCT_SEARCH_];
+    NSString *endpoint  = [NSString stringWithFormat:API_ENDPOINT_PRODUCT_SEARCH];
     NSString *url       = [NSString stringWithFormat:@"%@%@",API_BASE_URL,endpoint];
 
     [self GET:url
    parameters:parameters
+      success:[self successCallback:success]
+      failure:[self failureCallback:failure]];
+}
+
+
+- (void) getProductDetails:(NSString *)productID
+                   success:(ServerManagerSuccessBlock)success
+                   failure:(ServerManagerFailureBlock)failure
+{
+    ErrorType errorType = [self setBearerForAuthorizationHeader];
+    if (errorType != kErrorNone) {
+        [self checkErrorType:errorType forFailureBlock:failure];
+        return;
+    }
+    
+    NSString *endpoint  = [NSString stringWithFormat:API_ENDPOINT_PRODUCT_DETAILS, productID];
+    NSString *url       = [NSString stringWithFormat:@"%@%@",API_BASE_URL,endpoint];
+    
+    [self GET:url
+   parameters:nil
       success:[self successCallback:success]
       failure:[self failureCallback:failure]];
 }
@@ -303,7 +322,7 @@ static ServerManager *manager = nil;
     
     info[NSLocalizedDescriptionKey] = NO_INTERNET_CONNECTION;
     
-    NSError *error = [NSError errorWithDomain:@"Connection Error" code:9998 userInfo:info];
+    NSError *error = [NSError errorWithDomain:CONNECTION_ERROR code:9998 userInfo:info];
     return error;
 }
 
@@ -313,16 +332,16 @@ static ServerManager *manager = nil;
     
     info[NSLocalizedDescriptionKey] = ISSUE_ACCESS_TOKEN;
     
-    NSError *error = [NSError errorWithDomain:@"Connection Error" code:9997 userInfo:info];
+    NSError *error = [NSError errorWithDomain:CONNECTION_ERROR code:9997 userInfo:info];
     
     return error;
 }
 
 - (void)sessionExpiredMessage
 {
-    NSString *alertTitle    = @"Session Expired";
-    NSString *alertMessage  = @"Your session has expired. Please log in again.";
-    NSString *alertButton   = @"Ok";
+    NSString *alertTitle    = SESSION_EXPIRED;
+    NSString *alertMessage  = SESSION_EXPIRED_MESSAGE;
+    NSString *alertButton   = BUTTON_OK;
     
     self.sessionExpiredAlertController =
     [UIAlertController showAlertInViewController:[UIViewController topViewController]

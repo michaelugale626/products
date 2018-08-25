@@ -33,9 +33,6 @@
 
 - (void)setNavigationTitle:(NSString*)title;
 
-- (void)setNavigationButtonLeft;
-- (void)setNavigationButtonRight;
-
 - (void)setNavigationBackButtonLeft;
 - (void)setNavigationBackButtonRight;
 

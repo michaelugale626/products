@@ -150,33 +150,6 @@
     self.navigationItem.titleView   = label;
 }
 
-- (void)setNavigationButtonLeft
-{
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
-    
-    UIButton *tempButton = [UIButton setNavDrawerButton];
-    [tempButton addTarget:self
-                   action:@selector(showMenu)
-         forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithCustomView:tempButton];
-    self.navigationItem.leftBarButtonItem   = button;
-    self.navigationItem.rightBarButtonItem  = nil;
-}
-
-- (void)setNavigationButtonRight
-{
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
-    
-    UIButton *tempButton = [UIButton setNavDrawerButton];
-    [tempButton addTarget:self
-                   action:@selector(showMenu)
-         forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithCustomView:tempButton];
-    self.navigationItem.rightBarButtonItem  = button;
-    self.navigationItem.leftBarButtonItem   = nil;
-    self.navigationItem.hidesBackButton     = YES;
-}
-
 - (void)setNavigationBackButtonLeft
 {
     [self.navigationController setNavigationBarHidden:NO animated:YES];

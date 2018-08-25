@@ -12,6 +12,9 @@
 #import "NSObject+Cast.h"
 #import "NSString+Additions.h"
 
+//Utilities
+#import "Utilities.h"
+
 @implementation PricesSetter
 
 static PricesSetter *shared = nil;
@@ -30,8 +33,8 @@ static PricesSetter *shared = nil;
 {
     PricesManager *price        = [[PricesManager alloc] init];
     price.priceOnSale           = [rows[@"on_sale"] safeStringValue];
-    price.pricePrice            = [rows[@"price"] safeStringValue];
-    price.pricePromoPrice       = [rows[@"promo_price"] safeStringValue];
+    price.pricePrice            = [Utilities formatPrice:[rows[@"price"] safeNumberValue]];
+    price.pricePromoPrice       = [Utilities formatPrice:[rows[@"promo_price"] safeNumberValue]];
     price.priceSavings          = [rows[@"savings"] safeStringValue];
     price.priceSavingType       = [rows[@"savings_type"] safeStringValue];
     

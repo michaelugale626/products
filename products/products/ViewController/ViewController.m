@@ -74,11 +74,6 @@
     self.isLoadMore     = false;
 }
 
-- (void)configureView
-{
-    [self cofigureCollectionView];
-}
-
 - (void) cofigureCollectionView
 {
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cellIdentifier"];
@@ -91,6 +86,20 @@
                             action:@selector(pullToRefresh)
                   forControlEvents:UIControlEventValueChanged];
 }
+
+- (void)configureView
+{
+    [self configureNavigationBar];
+    [self cofigureCollectionView];
+    
+}
+
+- (void) configureNavigationBar
+{
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    [self setNavigationTitle:@"Product List"];
+}
+
 #pragma mark - UICollectionViewDataSource / UICollectionViewDelegate
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
@@ -189,7 +198,7 @@
         [dictionary setObject:[NSString stringWithFormat:@"%i",self.offset]     forKey:@"page"];
         
         [[ServerManager sharedManager] getProductList:dictionary success:^(NSDictionary *responseObject) {
-            SPLOG_DEBUG(@"%@",responseObject);
+            SPLOG_DEBUG(@"PRODUCT LIST: %@",responseObject);
             
             self.offset = self.offset + 1;
             
@@ -214,10 +223,9 @@
             [self.hud hideAnimated:YES afterDelay:0.25f];
             
         } failure:^(NSError *error) {
-            SPLOG_DEBUG(@"%@",error);
+            SPLOG_DEBUG(@"PRODUCT LIST: %@",error);
             
             [self hasLoadingItem];
-            [self.collectionView reloadData];
             [Utilities showSimpleAlert:self setTitle:[error localizedDescription]];
         }];
     } else {
