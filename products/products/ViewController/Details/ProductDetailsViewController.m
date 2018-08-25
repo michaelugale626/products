@@ -20,8 +20,21 @@
 
 //Objects
 #import "ProductSetter.h"
+#import "ProductImagesManager.h"
+
+//Vendor
+#import <ImageZoomViewer/ImageZoomViewer.h>
+
+//Categories
+#import "UIViewController+Additions.h"
 
 @interface ProductDetailsViewController ()
+{
+    //Vendor
+    __weak IBOutlet UIImageView *thumbImageView;
+    NSMutableArray *images;
+    NSInteger currentIndex;
+}
 
 @property (weak, nonatomic) IBOutlet UITableView        *tableView;
 @property (nonatomic, strong) NSMutableArray            *listItem;
@@ -120,6 +133,21 @@
      ];
 }
 
+-(void)setGallery
+{
+    images = [[NSMutableArray alloc]init];
+    
+    for (int i = 0; i <= [self.productDetails.productGallery count] - 1; i++) {
+        ProductImagesManager *image = self.productDetails.productGallery[i];
+        NSString *imageURL = [NSString stringWithFormat:@"%@%@",API_MEDIA_BASE_URL, image.productImagesName];
+        [images addObject:imageURL];
+    }
+    
+    thumbImageView.layer.borderWidth = 1.0;
+    [thumbImageView.layer setBorderColor:[UIColor orangeColor].CGColor];
+    currentIndex = 0;
+    [thumbImageView sd_setImageWithURL:[NSURL URLWithString:[images firstObject]]];
+}
 
 #pragma mark - UITableViewDataSource / UITableViewDelegate
 
@@ -187,7 +215,14 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSDictionary *dictionaryData = self.listItem[indexPath.row];
+    
+    if ([[dictionaryData objectForKey:@"itemType"] isEqualToString:@"gallery"]) {
+        [self enlargeImageMessage];
+    }
 }
+
+#pragma mark - API Action
 
 - (void)getProductDetails
 {
@@ -200,6 +235,7 @@
                                                  
                                                  if ([response count] != 0) {
                                                      self.productDetails = [[ProductSetter shared] setInfo:response];
+                                                     [self setGallery];
                                                  }
                                                  
                                                  [self.tableView reloadData];
@@ -211,4 +247,33 @@
                                                  [Utilities showSimpleAlert:self setTitle:[error localizedDescription]];
                                              }];
 }
+
+#pragma mark - NYTPhotos Gallery
+
+- (void) enlargeImageMessage
+{
+    ImageZoomViewer *zoomImageView = [[ImageZoomViewer alloc]initWithBottomCollectionBorderColor:[UIColor orangeColor]];
+    [zoomImageView.closeBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    zoomImageView.delegate = (id)self;
+    CGPoint point = [self.view convertPoint:thumbImageView.frame.origin toView:self.view];
+    CGRect animFrame = CGRectMake(point.x, point.y, thumbImageView.frame.size.width, thumbImageView.frame.size.height);
+    UIImageView *imgView = [[UIImageView alloc] initWithFrame:animFrame];
+    [imgView sd_setImageWithURL:[NSURL URLWithString:[images objectAtIndex:currentIndex]]];
+    [zoomImageView showWithPageIndex:currentIndex andImagesCount:images.count withInitialImageView:imgView andAnimType:AnimationTypePop];
+}
+
+# pragma Mark - ImageZoomViewer Delegates
+
+- (void)initializeImageviewWithImages:(UIImageView *)imageview withIndexPath:(NSIndexPath *)indexPath withCollection:(int)collectionReference
+{
+    NSString *urlString = [images objectAtIndex:indexPath.row];
+    [imageview sd_setImageWithURL:[NSURL URLWithString:urlString]];
+}
+
+- (void)imageIndexOnChange:(NSInteger)index
+{
+    currentIndex = index;
+    [thumbImageView sd_setImageWithURL:[NSURL URLWithString:[images objectAtIndex:currentIndex]]];
+}
+
 @end

@@ -44,6 +44,6 @@
     SPLOG_DEBUG(@"imageURL: %@",imageURL);
     
     [self.image sd_setImageWithURL:[NSURL URLWithString:imageURL]
-                      placeholderImage:[UIImage imageNamed:@"default_list"]];
+                      placeholderImage:[UIImage imageNamed:@"default_grid"]];
 }
 @end

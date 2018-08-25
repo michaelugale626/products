@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F19DFF558A112B1465243E23F14D8C9F"
-               BlueprintName = "SDVersion"
+               BlueprintIdentifier = "B349F8B5A4274EC9A2F3690EA8B56462"
+               BlueprintName = "ImageZoomViewer"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "SDVersion.framework">
+               BuildableName = "ImageZoomViewer.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
