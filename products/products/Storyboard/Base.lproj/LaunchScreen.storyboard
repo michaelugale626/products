@@ -20,12 +20,28 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="23n-bQ-ZTk">
+                                <rect key="frame" x="122" y="268" width="130" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="YNl-7S-85F"/>
+                                    <constraint firstAttribute="height" constant="130" id="Zfa-cW-hnh"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="0.91439378261566162" green="0.25571006536483765" blue="0.32772701978683472" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="23n-bQ-ZTk" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="VrS-08-sdK"/>
+                            <constraint firstItem="23n-bQ-ZTk" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Xez-s6-HCH"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="128" height="148"/>
+    </resources>
 </document>
