@@ -16,3 +16,18 @@ target 'products' do
     pod 'SDWebImage', '~>3.8'
     pod 'ImageZoomViewer'
 end
+
+
+target 'productsRestTests' do
+    
+    pod 'AFNetworking'
+    pod 'MBProgressHUD'
+    pod 'SDVersion'
+    pod 'Masonry'
+    
+    pod 'UIAlertController+Blocks'
+    pod 'HMSegmentedControl'
+    pod 'SDWebImage', '~>3.8'
+    pod 'ImageZoomViewer'
+    
+end

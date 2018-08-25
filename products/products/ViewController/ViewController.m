@@ -24,7 +24,7 @@
 //CustomViews
 #import "ListCollectionViewCell.h"
 
-#define PAGE_LIMIT @"10"
+#define PAGE_LIMIT @"30"
 
 @interface ViewController ()
 
