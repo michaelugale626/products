@@ -56,15 +56,16 @@
     [self getProducts];
 }
 
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Private Methods
 
+/**
+    Set varables values
+ */
 - (void)initializeObjects
 {
     self.offset         = 0;
@@ -74,6 +75,9 @@
     self.isLoadMore     = false;
 }
 
+/**
+    Set Collection View Layout and set pull to refresh
+ */
 - (void) cofigureCollectionView
 {
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cellIdentifier"];
@@ -91,9 +95,11 @@
 {
     [self configureNavigationBar];
     [self cofigureCollectionView];
-    
 }
 
+/**
+    Set Navigation Title and design
+ */
 - (void) configureNavigationBar
 {
     [self.navigationController setNavigationBarHidden:NO animated:YES];
@@ -144,6 +150,9 @@
 
 #pragma mark - API Action
 
+/**
+    Check if API call is still loading if not start loading animation
+ */
 - (void)checkIsLoading
 {
     self.loaderCtr++;
@@ -161,18 +170,27 @@
     }
 }
 
+/**
+    Reset all initial objects and get product list
+ */
 - (void)pullToRefresh
 {
     [self initializeObjects];
     [self getProducts];
 }
 
+/**
+    Set true to load more variable and get more product list
+ */
 - (void)loadMoreItems
 {
     self.isLoadMore = true;
     [self getProducts];
 }
 
+/**
+    Check API call ends and stop animation loader
+ */
 - (void)hasLoadingItem
 {
     self.isLoading        = false;
@@ -186,6 +204,9 @@
     }
 }
 
+/**
+    Get the product list from the API
+ */
 - (void)getProducts
 {
     if (!self.isLoading) {
@@ -201,23 +222,7 @@
             SPLOG_DEBUG(@"PRODUCT LIST: %@",responseObject);
             
             self.offset = self.offset + 1;
-            
-            NSDictionary *response = responseObject[@"products"];
-            
-            if ([response count] != 0) {
-                
-                if ( !self.isLoadMore ) {
-                    self.listProducts = [[NSMutableArray alloc] init];
-                }
-                
-                [self.listProducts addObjectsFromArray:[[ProductSetter shared] setObject: response]];
-                self.totalItemLoaded = (int)[self.listProducts count];
-                [self.collectionView reloadData];
-            } else if (!self.isLoadMore) {
-                self.listProducts = [[NSMutableArray alloc] init];
-                [self.collectionView reloadData];
-            }
-            
+            [self setProductListValue:responseObject[@"products"]];
             [self hasLoadingItem];
             [self.refreshControl endRefreshing];
             [self.hud hideAnimated:YES afterDelay:0.25f];
@@ -226,11 +231,32 @@
             SPLOG_DEBUG(@"PRODUCT LIST: %@",error);
             
             [self hasLoadingItem];
+            [self.refreshControl endRefreshing];
             [Utilities showSimpleAlert:self setTitle:[error localizedDescription]];
         }];
     } else {
         [self.refreshControl endRefreshing];
         [self.hud hideAnimated:YES afterDelay:0.25f];
+    }
+}
+
+/**
+    Parse API returned values and set to Product object
+ */
+-(void)setProductListValue: (NSDictionary *)response
+{
+    if ([response count] != 0) {
+        
+        if ( !self.isLoadMore ) {
+            self.listProducts = [[NSMutableArray alloc] init];
+        }
+        
+        [self.listProducts addObjectsFromArray:[[ProductSetter shared] setObject: response]];
+        self.totalItemLoaded = (int)[self.listProducts count];
+        [self.collectionView reloadData];
+    } else if (!self.isLoadMore) {
+        self.listProducts = [[NSMutableArray alloc] init];
+        [self.collectionView reloadData];
     }
 }
 

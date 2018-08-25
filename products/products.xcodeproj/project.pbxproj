@@ -8,73 +8,45 @@
 
 /* Begin PBXBuildFile section */
 		C4160ED9212F00ED005BCFDE /* PriceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4160ED8212F00ED005BCFDE /* PriceTableViewCell.m */; };
-		C4160EDA212F00ED005BCFDE /* PriceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4160ED8212F00ED005BCFDE /* PriceTableViewCell.m */; };
 		C4160EDE212F0427005BCFDE /* MeasureTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4160EDD212F0427005BCFDE /* MeasureTableViewCell.m */; };
-		C4160EDF212F0427005BCFDE /* MeasureTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4160EDD212F0427005BCFDE /* MeasureTableViewCell.m */; };
 		C4160EE3212F059D005BCFDE /* DescriptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4160EE2212F059D005BCFDE /* DescriptionTableViewCell.m */; };
-		C4160EE4212F059D005BCFDE /* DescriptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4160EE2212F059D005BCFDE /* DescriptionTableViewCell.m */; };
+		C457CFF4213105B10021EDB4 /* productsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B55F212B023200BD1A48 /* productsTests.m */; };
+		C457CFFC21312B340021EDB4 /* safeStringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C457CFFB21312B340021EDB4 /* safeStringTests.m */; };
 		C4E1B548212B023200BD1A48 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B547212B023200BD1A48 /* AppDelegate.m */; };
 		C4E1B54B212B023200BD1A48 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B54A212B023200BD1A48 /* ViewController.m */; };
 		C4E1B54E212B023200BD1A48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4E1B54C212B023200BD1A48 /* Main.storyboard */; };
 		C4E1B550212B023200BD1A48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4E1B54F212B023200BD1A48 /* Assets.xcassets */; };
 		C4E1B553212B023200BD1A48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4E1B551212B023200BD1A48 /* LaunchScreen.storyboard */; };
 		C4E1B556212B023200BD1A48 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B555212B023200BD1A48 /* main.m */; };
-		C4E1B560212B023200BD1A48 /* productsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B55F212B023200BD1A48 /* productsTests.m */; };
 		C4E1B56B212B023200BD1A48 /* productsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B56A212B023200BD1A48 /* productsUITests.m */; };
 		C4E1B58A212CF64300BD1A48 /* ServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B589212CF64300BD1A48 /* ServerManager.m */; };
-		C4E1B58B212CF64300BD1A48 /* ServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B589212CF64300BD1A48 /* ServerManager.m */; };
 		C4E1B58F212CF67C00BD1A48 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B58D212CF67C00BD1A48 /* Reachability.m */; };
-		C4E1B590212CF67C00BD1A48 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B58D212CF67C00BD1A48 /* Reachability.m */; };
 		C4E1B593212CF93000BD1A48 /* Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B592212CF93000BD1A48 /* Cache.m */; };
-		C4E1B594212CF93000BD1A48 /* Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B592212CF93000BD1A48 /* Cache.m */; };
 		C4E1B597212CFA6600BD1A48 /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B596212CFA6600BD1A48 /* Utilities.m */; };
 		C4E1B598212CFA6600BD1A48 /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B596212CFA6600BD1A48 /* Utilities.m */; };
 		C4E1B59F212CFB4E00BD1A48 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B59A212CFB4E00BD1A48 /* NSString+Additions.m */; };
-		C4E1B5A0212CFB4E00BD1A48 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B59A212CFB4E00BD1A48 /* NSString+Additions.m */; };
 		C4E1B5A1212CFB4E00BD1A48 /* NSDateFormatter+StaticInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B59D212CFB4E00BD1A48 /* NSDateFormatter+StaticInstance.m */; };
-		C4E1B5A2212CFB4E00BD1A48 /* NSDateFormatter+StaticInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B59D212CFB4E00BD1A48 /* NSDateFormatter+StaticInstance.m */; };
 		C4E1B5A3212CFB4E00BD1A48 /* NSObject+Cast.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B59E212CFB4E00BD1A48 /* NSObject+Cast.m */; };
-		C4E1B5A4212CFB4E00BD1A48 /* NSObject+Cast.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B59E212CFB4E00BD1A48 /* NSObject+Cast.m */; };
 		C4E1B5A7212CFBE400BD1A48 /* UIColor+More.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5A5212CFBE400BD1A48 /* UIColor+More.m */; };
-		C4E1B5A8212CFBE400BD1A48 /* UIColor+More.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5A5212CFBE400BD1A48 /* UIColor+More.m */; };
 		C4E1B5AB212CFC2600BD1A48 /* UIViewController+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5A9212CFC2600BD1A48 /* UIViewController+Additions.m */; };
-		C4E1B5AC212CFC2600BD1A48 /* UIViewController+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5A9212CFC2600BD1A48 /* UIViewController+Additions.m */; };
 		C4E1B5AF212CFCB700BD1A48 /* UIAlertController+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5AD212CFCB700BD1A48 /* UIAlertController+Convenience.m */; };
-		C4E1B5B0212CFCB700BD1A48 /* UIAlertController+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5AD212CFCB700BD1A48 /* UIAlertController+Convenience.m */; };
 		C4E1B5B3212D039100BD1A48 /* ProductManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5B2212D039100BD1A48 /* ProductManager.m */; };
-		C4E1B5B4212D039100BD1A48 /* ProductManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5B2212D039100BD1A48 /* ProductManager.m */; };
 		C4E1B5B7212D03A200BD1A48 /* ProductSetter.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5B6212D03A200BD1A48 /* ProductSetter.m */; };
-		C4E1B5B8212D03A200BD1A48 /* ProductSetter.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5B6212D03A200BD1A48 /* ProductSetter.m */; };
 		C4E1B5BD212D050B00BD1A48 /* PricesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5BC212D050B00BD1A48 /* PricesManager.m */; };
-		C4E1B5BE212D050B00BD1A48 /* PricesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5BC212D050B00BD1A48 /* PricesManager.m */; };
 		C4E1B5C1212D051800BD1A48 /* PricesSetter.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5C0212D051800BD1A48 /* PricesSetter.m */; };
-		C4E1B5C2212D051800BD1A48 /* PricesSetter.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5C0212D051800BD1A48 /* PricesSetter.m */; };
 		C4E1B5C6212D9D8100BD1A48 /* ProductImagesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5C5212D9D8100BD1A48 /* ProductImagesManager.m */; };
-		C4E1B5C7212D9D8100BD1A48 /* ProductImagesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5C5212D9D8100BD1A48 /* ProductImagesManager.m */; };
 		C4E1B5CA212D9D9100BD1A48 /* ProductImagesSetter.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5C9212D9D9100BD1A48 /* ProductImagesSetter.m */; };
-		C4E1B5CB212D9D9100BD1A48 /* ProductImagesSetter.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5C9212D9D9100BD1A48 /* ProductImagesSetter.m */; };
 		C4E1B5D1212DAC4400BD1A48 /* BaseCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5D0212DAC4400BD1A48 /* BaseCollectionViewCell.m */; };
-		C4E1B5D2212DAC4400BD1A48 /* BaseCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5D0212DAC4400BD1A48 /* BaseCollectionViewCell.m */; };
 		C4E1B5D6212DACD700BD1A48 /* ListCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5D5212DACD700BD1A48 /* ListCollectionViewCell.m */; };
-		C4E1B5D7212DACD700BD1A48 /* ListCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5D5212DACD700BD1A48 /* ListCollectionViewCell.m */; };
 		C4E1B5DB212DAF9A00BD1A48 /* MeasuresManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5DA212DAF9A00BD1A48 /* MeasuresManager.m */; };
-		C4E1B5DC212DAF9A00BD1A48 /* MeasuresManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5DA212DAF9A00BD1A48 /* MeasuresManager.m */; };
 		C4E1B5DF212DAFA900BD1A48 /* MeasuresSetter.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5DE212DAFA900BD1A48 /* MeasuresSetter.m */; };
-		C4E1B5E0212DAFA900BD1A48 /* MeasuresSetter.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5DE212DAFA900BD1A48 /* MeasuresSetter.m */; };
 		C4E1B5E3212EE00500BD1A48 /* ProductDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5E2212EE00500BD1A48 /* ProductDetailsViewController.m */; };
-		C4E1B5E4212EE00500BD1A48 /* ProductDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5E2212EE00500BD1A48 /* ProductDetailsViewController.m */; };
 		C4E1B5E8212EE03C00BD1A48 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5E7212EE03C00BD1A48 /* BaseViewController.m */; };
-		C4E1B5E9212EE03C00BD1A48 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5E7212EE03C00BD1A48 /* BaseViewController.m */; };
 		C4E1B5EE212EE19900BD1A48 /* UILabel+Format.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5EA212EE19800BD1A48 /* UILabel+Format.m */; };
-		C4E1B5EF212EE19900BD1A48 /* UILabel+Format.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5EA212EE19800BD1A48 /* UILabel+Format.m */; };
 		C4E1B5F0212EE19900BD1A48 /* UIButton+Format.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5EC212EE19900BD1A48 /* UIButton+Format.m */; };
-		C4E1B5F1212EE19900BD1A48 /* UIButton+Format.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5EC212EE19900BD1A48 /* UIButton+Format.m */; };
 		C4E1B5F7212EEF2E00BD1A48 /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5F6212EEF2E00BD1A48 /* BaseTableViewCell.m */; };
-		C4E1B5F8212EEF2E00BD1A48 /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5F6212EEF2E00BD1A48 /* BaseTableViewCell.m */; };
 		C4E1B5FC212EEF7700BD1A48 /* GalleryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5FB212EEF7700BD1A48 /* GalleryTableViewCell.m */; };
-		C4E1B5FD212EEF7700BD1A48 /* GalleryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B5FB212EEF7700BD1A48 /* GalleryTableViewCell.m */; };
 		C4E1B602212EF09B00BD1A48 /* TitleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B601212EF09B00BD1A48 /* TitleTableViewCell.m */; };
-		C4E1B603212EF09B00BD1A48 /* TitleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E1B601212EF09B00BD1A48 /* TitleTableViewCell.m */; };
 		C4E1B611212EF56800BD1A48 /* Seravek-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4E1B605212EF56700BD1A48 /* Seravek-ExtraLight.otf */; };
 		C4E1B612212EF56800BD1A48 /* Seravek-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4E1B605212EF56700BD1A48 /* Seravek-ExtraLight.otf */; };
 		C4E1B613212EF56800BD1A48 /* Seravek-ExtraLightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4E1B606212EF56700BD1A48 /* Seravek-ExtraLightItalic.otf */; };
@@ -103,6 +75,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C457CFFE21312B340021EDB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4E1B53B212B023200BD1A48 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C4E1B542212B023200BD1A48;
+			remoteInfo = products;
+		};
 		C4E1B55C212B023200BD1A48 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C4E1B53B212B023200BD1A48 /* Project object */;
@@ -129,6 +108,9 @@
 		C4160EDD212F0427005BCFDE /* MeasureTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeasureTableViewCell.m; sourceTree = "<group>"; };
 		C4160EE1212F059D005BCFDE /* DescriptionTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DescriptionTableViewCell.h; sourceTree = "<group>"; };
 		C4160EE2212F059D005BCFDE /* DescriptionTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DescriptionTableViewCell.m; sourceTree = "<group>"; };
+		C457CFF921312B340021EDB4 /* safeStringTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = safeStringTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C457CFFB21312B340021EDB4 /* safeStringTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = safeStringTests.m; sourceTree = "<group>"; };
+		C457CFFD21312B340021EDB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4E1B543212B023200BD1A48 /* products.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = products.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4E1B546212B023200BD1A48 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C4E1B547212B023200BD1A48 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -217,6 +199,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C457CFF621312B340021EDB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C4E1B540212B023200BD1A48 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -278,12 +267,22 @@
 			path = Description;
 			sourceTree = "<group>";
 		};
+		C457CFFA21312B340021EDB4 /* safeStringTests */ = {
+			isa = PBXGroup;
+			children = (
+				C457CFFB21312B340021EDB4 /* safeStringTests.m */,
+				C457CFFD21312B340021EDB4 /* Info.plist */,
+			);
+			path = safeStringTests;
+			sourceTree = "<group>";
+		};
 		C4E1B53A212B023200BD1A48 = {
 			isa = PBXGroup;
 			children = (
 				C4E1B545212B023200BD1A48 /* products */,
 				C4E1B55E212B023200BD1A48 /* productsTests */,
 				C4E1B569212B023200BD1A48 /* productsUITests */,
+				C457CFFA21312B340021EDB4 /* safeStringTests */,
 				C4E1B544212B023200BD1A48 /* Products */,
 				52FBD3711769E1433DBFD4F1 /* Pods */,
 				D7963D1C6D88BE0E3D1D9AF7 /* Frameworks */,
@@ -296,6 +295,7 @@
 				C4E1B543212B023200BD1A48 /* products.app */,
 				C4E1B55B212B023200BD1A48 /* productsTests.xctest */,
 				C4E1B566212B023200BD1A48 /* productsUITests.xctest */,
+				C457CFF921312B340021EDB4 /* safeStringTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -641,6 +641,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C457CFF821312B340021EDB4 /* safeStringTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C457D00021312B340021EDB4 /* Build configuration list for PBXNativeTarget "safeStringTests" */;
+			buildPhases = (
+				C457CFF521312B340021EDB4 /* Sources */,
+				C457CFF621312B340021EDB4 /* Frameworks */,
+				C457CFF721312B340021EDB4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C457CFFF21312B340021EDB4 /* PBXTargetDependency */,
+			);
+			name = safeStringTests;
+			productName = safeStringTests;
+			productReference = C457CFF921312B340021EDB4 /* safeStringTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		C4E1B542212B023200BD1A48 /* products */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C4E1B56F212B023200BD1A48 /* Build configuration list for PBXNativeTarget "products" */;
@@ -706,6 +724,11 @@
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Michael Ugale";
 				TargetAttributes = {
+					C457CFF821312B340021EDB4 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C4E1B542212B023200BD1A48;
+					};
 					C4E1B542212B023200BD1A48 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
@@ -738,11 +761,19 @@
 				C4E1B542212B023200BD1A48 /* products */,
 				C4E1B55A212B023200BD1A48 /* productsTests */,
 				C4E1B565212B023200BD1A48 /* productsUITests */,
+				C457CFF821312B340021EDB4 /* safeStringTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C457CFF721312B340021EDB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C4E1B541212B023200BD1A48 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -860,6 +891,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C457CFF521312B340021EDB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C457CFFC21312B340021EDB4 /* safeStringTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C4E1B53F212B023200BD1A48 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -904,37 +943,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4E1B5A4212CFB4E00BD1A48 /* NSObject+Cast.m in Sources */,
-				C4160EDA212F00ED005BCFDE /* PriceTableViewCell.m in Sources */,
-				C4E1B5F1212EE19900BD1A48 /* UIButton+Format.m in Sources */,
-				C4E1B5D2212DAC4400BD1A48 /* BaseCollectionViewCell.m in Sources */,
-				C4E1B58B212CF64300BD1A48 /* ServerManager.m in Sources */,
-				C4E1B5E0212DAFA900BD1A48 /* MeasuresSetter.m in Sources */,
-				C4E1B5A8212CFBE400BD1A48 /* UIColor+More.m in Sources */,
-				C4E1B5DC212DAF9A00BD1A48 /* MeasuresManager.m in Sources */,
-				C4E1B5CB212D9D9100BD1A48 /* ProductImagesSetter.m in Sources */,
-				C4E1B5F8212EEF2E00BD1A48 /* BaseTableViewCell.m in Sources */,
-				C4E1B5C7212D9D8100BD1A48 /* ProductImagesManager.m in Sources */,
-				C4E1B590212CF67C00BD1A48 /* Reachability.m in Sources */,
-				C4160EE4212F059D005BCFDE /* DescriptionTableViewCell.m in Sources */,
-				C4E1B5B8212D03A200BD1A48 /* ProductSetter.m in Sources */,
-				C4E1B603212EF09B00BD1A48 /* TitleTableViewCell.m in Sources */,
-				C4E1B5AC212CFC2600BD1A48 /* UIViewController+Additions.m in Sources */,
-				C4E1B5D7212DACD700BD1A48 /* ListCollectionViewCell.m in Sources */,
-				C4E1B5B0212CFCB700BD1A48 /* UIAlertController+Convenience.m in Sources */,
-				C4E1B594212CF93000BD1A48 /* Cache.m in Sources */,
-				C4E1B5B4212D039100BD1A48 /* ProductManager.m in Sources */,
-				C4E1B560212B023200BD1A48 /* productsTests.m in Sources */,
+				C457CFF4213105B10021EDB4 /* productsTests.m in Sources */,
 				C4E1B598212CFA6600BD1A48 /* Utilities.m in Sources */,
-				C4E1B5A0212CFB4E00BD1A48 /* NSString+Additions.m in Sources */,
-				C4E1B5A2212CFB4E00BD1A48 /* NSDateFormatter+StaticInstance.m in Sources */,
-				C4E1B5E4212EE00500BD1A48 /* ProductDetailsViewController.m in Sources */,
-				C4160EDF212F0427005BCFDE /* MeasureTableViewCell.m in Sources */,
-				C4E1B5C2212D051800BD1A48 /* PricesSetter.m in Sources */,
-				C4E1B5EF212EE19900BD1A48 /* UILabel+Format.m in Sources */,
-				C4E1B5BE212D050B00BD1A48 /* PricesManager.m in Sources */,
-				C4E1B5E9212EE03C00BD1A48 /* BaseViewController.m in Sources */,
-				C4E1B5FD212EEF7700BD1A48 /* GalleryTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -949,6 +959,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		C457CFFF21312B340021EDB4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C4E1B542212B023200BD1A48 /* products */;
+			targetProxy = C457CFFE21312B340021EDB4 /* PBXContainerItemProxy */;
+		};
 		C4E1B55D212B023200BD1A48 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C4E1B542212B023200BD1A48 /* products */;
@@ -981,6 +996,34 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C457D00121312B340021EDB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = safeStringTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sample.www.safeStringTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/products.app/products";
+			};
+			name = Debug;
+		};
+		C457D00221312B340021EDB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = safeStringTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sample.www.safeStringTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/products.app/products";
+			};
+			name = Release;
+		};
 		C4E1B56D212B023200BD1A48 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1178,6 +1221,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C457D00021312B340021EDB4 /* Build configuration list for PBXNativeTarget "safeStringTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C457D00121312B340021EDB4 /* Debug */,
+				C457D00221312B340021EDB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C4E1B53E212B023200BD1A48 /* Build configuration list for PBXProject "products" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

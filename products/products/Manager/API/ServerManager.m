@@ -36,7 +36,6 @@ NSString *const BASIC_AUTH_SECRET   = @"";
 
 @interface ServerManager ()
 
-@property (strong, nonatomic) UIAlertController     *sessionExpiredAlertController;
 @property (strong, nonatomic) UIView                *floatingWarning;
 
 @end
@@ -142,9 +141,6 @@ static ServerManager *manager = nil;
         case kErrorNoInternet:
             failure([self noInternetError]);
             break;
-        case kErrorFailedAccesstokenRequest:
-            failure([self fetchingAccessTokenError]);
-            break;
         default:
             failure([self unkownError]);
             break;
@@ -206,65 +202,60 @@ static ServerManager *manager = nil;
             errorMessage = SOMETHING_WENT_WRONG;
         }
         
-        NSString *errorCode = [error.userInfo[JSONResponseSerializerWithDataKey][@"code"] safeStringValue];
+        NSMutableDictionary *userInfo = [error.userInfo mutableCopy];
+        userInfo[NSLocalizedDescriptionKey] = errorMessage;
+        NSError *newError = [NSError errorWithDomain:error.domain code:error.code userInfo:userInfo];
         
-        if ([errorCode isEqualToString:@"401"] || [[NSString stringWithFormat:@"%ld",(long)error.code] isEqualToString:@"3840"]) {
-            if (!self.sessionExpiredAlertController) {
-                [self sessionExpiredMessage];
+        if ([errorMessage isEqualToString:@"No internet connection."]) {
+            
+            [self.floatingWarning removeFromSuperview];
+            
+            self.floatingWarning = [[UIView alloc] initWithFrame:CGRectMake(0,
+                                                                            64,
+                                                                            [UIViewController topViewController].view.bounds.size.width,
+                                                                            30)];
+            self.floatingWarning.backgroundColor    = [UIColor clearColor];
+            self.floatingWarning.alpha              = 0.7f;
+            
+            UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, [UIViewController topViewController].view.bounds.size.width, 30)];
+            label.text = errorMessage;
+            label.font = FONT_UI_Text_Light(14);
+            label.backgroundColor = [UIColor colorWithHex:THEME_COLOR_GRAY];
+            label.textColor = [UIColor whiteColor];
+            [label setTextAlignment:NSTextAlignmentCenter];
+            [self.floatingWarning addSubview:label];
+            
+            
+            UIViewController *tempView = [UIViewController topViewController];
+            
+            if ([tempView isKindOfClass:[UIAlertController class]]) {
+                tempView = [[[[UIApplication sharedApplication]delegate] window] rootViewController];
             }
-            if (failure) failure(nil);
-        } else {
-            NSMutableDictionary *userInfo = [error.userInfo mutableCopy];
-            userInfo[NSLocalizedDescriptionKey] = errorMessage;
-            NSError *newError = [NSError errorWithDomain:error.domain code:error.code userInfo:userInfo];
             
+            [tempView.view addSubview:self.floatingWarning];
             
-            if ([errorMessage isEqualToString:@"No internet connection."]) {
-                
+            // Then fades it away after 2 seconds (the cross-fade animation will take 0.5s)
+            [UIView animateWithDuration:0.5 delay:1.0 options:0 animations:^{
+                // Animate the alpha value of your imageView from 1.0 to 0.0 here
+                self.floatingWarning.alpha = 0.0f;
+            } completion:^(BOOL finished) {
+                // Once the animation is completed and the alpha has gone to 0.0, hide the view for good
                 [self.floatingWarning removeFromSuperview];
-                
-                self.floatingWarning = [[UIView alloc] initWithFrame:CGRectMake(0,
-                                                                                64,
-                                                                                [UIViewController topViewController].view.bounds.size.width,
-                                                                                30)];
-                self.floatingWarning.backgroundColor    = [UIColor clearColor];
-                self.floatingWarning.alpha              = 0.7f;
-                
-                UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, [UIViewController topViewController].view.bounds.size.width, 30)];
-                label.text = errorMessage;
-                label.font = FONT_UI_Text_Light(14);
-                label.backgroundColor = [UIColor colorWithHex:THEME_COLOR_GRAY];
-                label.textColor = [UIColor whiteColor];
-                [label setTextAlignment:NSTextAlignmentCenter];
-                [self.floatingWarning addSubview:label];
-                
-                
-                UIViewController *tempView = [UIViewController topViewController];
-                
-                if ([tempView isKindOfClass:[UIAlertController class]]) {
-                    tempView = [[[[UIApplication sharedApplication]delegate] window] rootViewController];
-                }
-                
-                [tempView.view addSubview:self.floatingWarning];
-                
-                // Then fades it away after 2 seconds (the cross-fade animation will take 0.5s)
-                [UIView animateWithDuration:0.5 delay:1.0 options:0 animations:^{
-                    // Animate the alpha value of your imageView from 1.0 to 0.0 here
-                    self.floatingWarning.alpha = 0.0f;
-                } completion:^(BOOL finished) {
-                    // Once the animation is completed and the alpha has gone to 0.0, hide the view for good
-                    [self.floatingWarning removeFromSuperview];
-                }];
-                
-            }
+            }];
             
-            if (failure) failure(newError);
         }
+        
+        if (failure) failure(newError);
     };
 }
 
 #pragma mark - GET
 
+/**
+    This is an API call to get Product List
+ 
+    @param parameters this contains theme, pageSize and page
+ */
 - (void) getProductList:(NSDictionary *)parameters
                 success:(ServerManagerSuccessBlock)success
                 failure:(ServerManagerFailureBlock)failure
@@ -284,7 +275,11 @@ static ServerManager *manager = nil;
       failure:[self failureCallback:failure]];
 }
 
-
+/**
+    This is an API call to get Product Details
+ 
+    @param productID this is the product ID
+ */
 - (void) getProductDetails:(NSString *)productID
                    success:(ServerManagerSuccessBlock)success
                    failure:(ServerManagerFailureBlock)failure
@@ -306,51 +301,31 @@ static ServerManager *manager = nil;
 
 #pragma mark - NSError Methods
 
+/**
+    Get error message for code 99999 which is an unknown error
+ 
+    @return NSError
+ */
 - (NSError *)unkownError
 {
     NSMutableDictionary *info = [[NSMutableDictionary alloc] init];
-    
     info[NSLocalizedDescriptionKey] = @"An unknown error occured.";
     
     NSError *error = [NSError errorWithDomain:@"Unknown error" code:9999 userInfo:info];
     return error;
 }
 
+/**
+     Get error message for code 9998 which is an no internet connection
+ 
+     @return NSError
+ */
 - (NSError *)noInternetError
 {
     NSMutableDictionary *info = [[NSMutableDictionary alloc] init];
-    
     info[NSLocalizedDescriptionKey] = NO_INTERNET_CONNECTION;
     
     NSError *error = [NSError errorWithDomain:CONNECTION_ERROR code:9998 userInfo:info];
     return error;
-}
-
-- (NSError *)fetchingAccessTokenError
-{
-    NSMutableDictionary *info = [[NSMutableDictionary alloc] init];
-    
-    info[NSLocalizedDescriptionKey] = ISSUE_ACCESS_TOKEN;
-    
-    NSError *error = [NSError errorWithDomain:CONNECTION_ERROR code:9997 userInfo:info];
-    
-    return error;
-}
-
-- (void)sessionExpiredMessage
-{
-    NSString *alertTitle    = SESSION_EXPIRED;
-    NSString *alertMessage  = SESSION_EXPIRED_MESSAGE;
-    NSString *alertButton   = BUTTON_OK;
-    
-    self.sessionExpiredAlertController =
-    [UIAlertController showAlertInViewController:[UIViewController topViewController]
-                                       withTitle:alertTitle
-                                         message:alertMessage
-                               cancelButtonTitle:alertButton
-                               otherButtonTitles:nil
-                                        tapBlock:^(UIAlertController * _Nonnull controller, UIAlertAction * _Nonnull action, NSInteger buttonIndex) {
-                                            self.sessionExpiredAlertController = nil;
-                                        }];
 }
 @end

@@ -65,7 +65,6 @@
 - (NSMutableArray *)listItem
 {
     if (!_listItem) {
-        
         _listItem = [[NSMutableArray alloc] init];
         
     }
@@ -84,15 +83,20 @@
 {
     [self configureNavigationBar];
     [self configureTableView];
-    
 }
 
+/**
+    Set Navigation Title and design
+ */
 - (void) configureNavigationBar
 {
     [self.navigationController setNavigationBarHidden:NO animated:YES];
     [self setNavigationTitle:[NSString stringWithFormat:@"SKU %@",self.productDetails.productSKU]];
 }
 
+/**
+ Set Table View Layout and set pull to refresh
+ */
 - (void) configureTableView
 {
     self.tableView.separatorStyle   = UITableViewCellSeparatorStyleNone;
@@ -102,37 +106,16 @@
 
 - (void)setListItems
 {
-    [_listItem addObject:
-     @{
-       @"itemType"          : @"gallery"
-       }
-     ];
-    
-    [_listItem addObject:
-     @{
-       @"itemType"          : @"title"
-       }
-     ];
-    
-    [_listItem addObject:
-     @{
-       @"itemType"          : @"measure"
-       }
-     ];
-    
-    [_listItem addObject:
-     @{
-       @"itemType"          : @"price"
-       }
-     ];
-    
-    [_listItem addObject:
-     @{
-       @"itemType"          : @"desc"
-       }
-     ];
+    _listItem = [[NSMutableArray alloc] initWithObjects:@{ @"itemType" : @"gallery"},
+                                                        @{ @"itemType" : @"title"},
+                                                        @{ @"itemType" : @"measure"},
+                                                        @{ @"itemType" : @"price"},
+                                                        @{ @"itemType" : @"desc"}, nil];
 }
 
+/**
+    Set list product images to gallery
+ */
 -(void)setGallery
 {
     images = [[NSMutableArray alloc]init];
@@ -224,6 +207,9 @@
 
 #pragma mark - API Action
 
+/**
+    Get the product details from the API
+ */
 - (void)getProductDetails
 {
     self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];

@@ -8,31 +8,47 @@
 
 #import <XCTest/XCTest.h>
 
+//Utilities
+#import "Utilities.h"
+
 @interface productsTests : XCTestCase
 
 @end
 
 @implementation productsTests
 
-- (void)setUp {
+- (void)setUp
+{
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
 }
 
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
+- (void)tearDown
+{
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+- (void)testIsEqualWithAccuracyPrimitive
+{
+    float primitive1 = [[Utilities formatPrice: [NSNumber numberWithFloat:5.000012]] floatValue];
+    float primitive2 = [[Utilities formatPrice: [NSNumber numberWithFloat:5.014]] floatValue];
+    float accuracy = 0.05;
+    
+    XCTAssertEqualWithAccuracy(primitive1, primitive2, accuracy, @"(%f) equal to (%f) with accuracy %f", primitive1, primitive2, accuracy);
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
+- (void)testIsNotEqualWithAccuracyPrimitive
+{
+    float primitive1 = [[Utilities formatPrice: [NSNumber numberWithFloat:5.012]] floatValue];
+    float primitive2 = [[Utilities formatPrice: [NSNumber numberWithFloat:5]] floatValue];
+    float accuracy = 0.001;
+    
+    XCTAssertNotEqualWithAccuracy(primitive1, primitive2, accuracy, @"(%f) not equal to (%f) with accuracy %f", primitive1, primitive2, accuracy);
+}
+
+- (void)testPerformanceExample
+{
     [self measureBlock:^{
-        // Put the code you want to measure the time of here.
+        
     }];
 }
 

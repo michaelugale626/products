@@ -27,8 +27,8 @@ typedef NS_ENUM(NSInteger, ErrorType)
 
 + (ServerManager *)sharedManager;
 
-
 #pragma mark - GET
+
 - (void) getProductList:(NSDictionary *)params
                 success:(ServerManagerSuccessBlock)success
                 failure:(ServerManagerFailureBlock)failure;
@@ -36,9 +36,5 @@ typedef NS_ENUM(NSInteger, ErrorType)
 - (void) getProductDetails:(NSString *)productID
                    success:(ServerManagerSuccessBlock)success
                    failure:(ServerManagerFailureBlock)failure;
-
-#pragma mark - Others
-- (BOOL)hasValidAccessToken;
-- (void)cancelAllOperations;
 
 @end

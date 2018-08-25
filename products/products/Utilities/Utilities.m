@@ -34,6 +34,11 @@
 
 #pragma mark - NSString
 
+/**
+    Format number to price with 2 decimal point
+ 
+    @returns  string
+ */
 +(NSString*) formatPrice: (NSNumber*)value
 {
     return [NSString stringWithFormat:@"%.02f", [value floatValue]];

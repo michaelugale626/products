@@ -24,18 +24,9 @@
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *leftBarButtonItem;
 
-- (UIImage *)backgroundImage;
-- (UIImage *)backgroundImageLayer;
-- (UIEdgeInsets)backgroundImageLayerInsets;
-- (BOOL)shouldDismissKeyboardWhenViewIsTapped;
-- (BOOL)enableInteractivePopGestureRecognizer;
 - (UIColor *)navigationBarTintColor;
 
 - (void)setNavigationTitle:(NSString*)title;
-
-- (void)setNavigationBackButtonLeft;
-- (void)setNavigationBackButtonRight;
-
 - (void)removeNavigationButtons;
 
 @end

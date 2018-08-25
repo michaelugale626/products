@@ -8,9 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-//Vendor
-#import <SDWebImage/UIImageView+WebCache.h>
-
 //Categories
 #import "UIColor+More.h"
 #import "UILabel+Format.h"
@@ -23,6 +20,9 @@
 #import "PricesManager.h"
 #import "ProductImagesManager.h"
 #import "MeasuresManager.h"
+
+//Vendor
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface BaseTableViewCell : UITableViewCell
 
